@@ -21,11 +21,27 @@ class Article(models.Model):
     class Meta:
         # Order articles in descending order based on
         # the created on field
-        ordering = ['-created_on']
+        ordering = ["-created_on"]
 
     def __str__(self):
         return f"{self.title}"
- 
+
     def number_of_likes(self):
         return self.likes.count()
 
+
+class Comment(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        # Order articles in descending order based on
+        # the created on field
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.name}"
