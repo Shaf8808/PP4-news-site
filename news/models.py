@@ -21,6 +21,8 @@ class Article(models.Model):
     likes = models.ManyToManyField(
         User, related_name='article_likes', blank=True)
 
+    # Sorts the articles based on the field
+    # created_on in descending order
     class Meta:
         ordering = ["-created_on"]
 
@@ -45,3 +47,20 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class Release(models.Model):
+    # Data model for upcoming releases section
+    name = models.CharField(max_length=100)
+    date = models.IntegerField()
+    platform = models.CharField(max_length=100)
+    image = CloudinaryField('image', default='placeholder')
+
+
+class Review(models.Model):
+    # Data model for review roundup section
+    title = models.CharField(max_length=200)
+    score = models.IntegerField()
+    content = models.TextField()
+    reviewer = models.CharField(max_length=200)
+    image = CloudinaryField('image', default='placeholder')
