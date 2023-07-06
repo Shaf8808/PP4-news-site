@@ -53,7 +53,7 @@ class Release(models.Model):
     # Data model for upcoming releases section
     name = models.CharField(max_length=100)
     release_date = models.DateTimeField()
-    platform = models.CharField(max_length=100)
+    platform = models.CharField(max_length=20)
     image = CloudinaryField('image', default='placeholder')
 
 
