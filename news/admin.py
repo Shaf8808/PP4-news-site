@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Article, Comment
+from .models import Article, Comment, Release, Review
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -23,3 +23,20 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
+
+
+@admin.register(Release)
+class ReleaseAdmin(admin.ModelAdmin):
+
+    search_fields = ('name', 'platform', 'release_date')
+    list_display = ('name', 'release_date', 'platform')
+    list_filter = ('platform', 'release_date')
+
+
+@admin.register(Review)
+class ReviewAdmin(SummernoteModelAdmin):
+
+    search_fields = ('title', 'score', 'content', 'reviewer')
+    list_display = ('title', 'score', 'reviewer')
+    list_filter = ('title', 'score', 'reviewer')
+    summernote_fields = ('content')

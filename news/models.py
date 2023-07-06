@@ -52,7 +52,7 @@ class Comment(models.Model):
 class Release(models.Model):
     # Data model for upcoming releases section
     name = models.CharField(max_length=100)
-    date = models.IntegerField()
+    release_date = models.DateTimeField()
     platform = models.CharField(max_length=100)
     image = CloudinaryField('image', default='placeholder')
 
