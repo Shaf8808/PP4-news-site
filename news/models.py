@@ -54,7 +54,13 @@ class Release(models.Model):
     name = models.CharField(max_length=100)
     release_date = models.DateTimeField()
     platform = models.CharField(max_length=20)
-    image = CloudinaryField('image', default='placeholder')
+    release_image = CloudinaryField('image', default='placeholder')
+
+    class Meta:
+        ordering = ["-release_date"]
+   
+    def __str__(self):
+        return self.name
 
 
 class Review(models.Model):

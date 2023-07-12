@@ -6,16 +6,17 @@
     <div class="row">
 
         <!-- Articles Column -->
-        <div class="col-12 mt-3 left">
+        <div class="col-12 mt-2 left">
             <div class="row">
                 {% for article in article_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
+                
+                <div class="col-md-9">
+                    <div class="card mb-9">
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in article.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                    src="">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ article.featured_image.url }}">
                                 {% endif %}
@@ -33,6 +34,23 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="col-md-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h2>Hottest Releases of the month</h2>
+                                <ul>
+                                    {% for release in release_list %}
+                                    <li> {{ release.release_image }} {{ release.name }}
+                                        {{ release.release_date }} {{ release.platform }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                                <hr />
+                                
+                            </div>
+                        </div>
+                    </div>
                 {% if forloop.counter|divisibleby:4 %}
             </div>
             <div class="row">
