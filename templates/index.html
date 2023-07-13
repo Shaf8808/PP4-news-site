@@ -5,13 +5,57 @@
 <div class="container-fluid">
     <div class="row">
 
-        <!-- Articles Column -->
+        <!-- Welcome banner Column -->
         <div class="col-12 mt-2 left">
             <div class="row">
-                {% for article in article_list %}
-                
                 <div class="col-md-9">
                     <div class="card mb-9">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if "placeholder" in article.featured_image.url %}
+                                <img class="card-img-top" src="">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ article.featured_image.url }}">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <p class="author"></p>
+                                </div>
+                            </div>
+                            <a href="#" class="article-link">
+                                <h2 class="card-title"></h2>
+                                <p class="card-text"></p>
+                            </a>
+                            <hr />
+                            <p class="card-text text-muted h6"> <i class="far fa-heart"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Top releases of the month column -->
+                <div class="col-md-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h2>Hottest Releases of the month</h2>
+                            <ul>
+                                {% for release in release_list %}
+                                <li> {{ release.release_image }} {{ release.name }}
+                                    {{ release.release_date }} {{ release.platform }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            <hr />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Article list column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for article in article_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in article.featured_image.url %}
@@ -24,7 +68,7 @@
                                     <p class="author">Author: {{ article.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="article-link">
+                            <a href="" class="">
                                 <h2 class="card-title">{{ article.title }}</h2>
                                 <p class="card-text">{{ article.excerpt }}</p>
                             </a>
@@ -34,24 +78,7 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-md-3">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h2>Hottest Releases of the month</h2>
-                                <ul>
-                                    {% for release in release_list %}
-                                    <li> {{ release.release_image }} {{ release.name }}
-                                        {{ release.release_date }} {{ release.platform }}
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                                <hr />
-                                
-                            </div>
-                        </div>
-                    </div>
-                {% if forloop.counter|divisibleby:4 %}
+                {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
                 {% endif %}
@@ -60,18 +87,5 @@
             </div>
         </div>
     </div>
-    <!-- {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %} -->
 </div>
 {%endblock%}
