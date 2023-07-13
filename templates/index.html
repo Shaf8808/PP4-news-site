@@ -12,22 +12,14 @@
                     <div class="card mb-9">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in article.featured_image.url %}
                                 <img class="card-img-top" src="">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ article.featured_image.url }}">
-                                {% endif %}
                                 <div class="image-flash">
                                     <p class="author"></p>
                                 </div>
                             </div>
-                            <a href="#" class="article-link">
-                                <h2 class="card-title"></h2>
-                                <p class="card-text"></p>
-                            </a>
+                            <h2 class="card-title"></h2>
+                            <p class="card-text"></p>
                             <hr />
-                            <p class="card-text text-muted h6"> <i class="far fa-heart"></i>
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -44,7 +36,6 @@
                                 {% endfor %}
                             </ul>
                             <hr />
-
                         </div>
                     </div>
                 </div>
@@ -59,8 +50,7 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in article.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="">
+                                <img class="card-img-top" src="">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ article.featured_image.url }}">
                                 {% endif %}
