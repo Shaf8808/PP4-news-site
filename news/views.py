@@ -13,3 +13,25 @@ class ArticleList(generic.ListView):
         context = super(ArticleList, self).get_context_data(*args, **kwargs)
         context['release_list'] = Release.objects.order_by("-release_date")
         return context
+
+
+class ArticleDetail(View):
+
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Article.objects.filter(status=1)
+        article = get_object_or_404(queryset, slug=slug)
+        comments = article.comments.filter(approved=True).order_by('created_on')
+        liked = False
+        if article.likes.filter(id=self.request.user.id).exists():
+            liked = True
+        
+        return render(
+            request,
+            "article_detail.html",
+            {
+                "article": article,
+                "comments": comments,
+                "liked": liked,
+
+            },
+        )
