@@ -50,3 +50,16 @@
     transform: skew(15deg);
     z-index: 100;
 }
+
+/* Sign-Up button styling */
+
+.btn-signup {
+    background-color: #23BBBB;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
+}

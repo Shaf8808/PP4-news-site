@@ -2,6 +2,8 @@ Tinymce - wysiwyg text editor
 
 Summernote - wysiwyg text editor
 
+Changing the login templates to improve UI and inherit styling of my own templates and css
+
 Testing
 
 An error with data type being an integear unable to be converted to a datetimefield
