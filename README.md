@@ -2,7 +2,7 @@ Tinymce - wysiwyg text editor
 
 Summernote - wysiwyg text editor
 
-Changing the login templates to improve UI and inherit styling of my own templates and css
+Changing the login templates of Django Allauth (login, signup html files etc.) to improve UI and inherit styling of my own templates and css
 
 Testing
 
