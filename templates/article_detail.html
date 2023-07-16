@@ -33,8 +33,29 @@
                 <div class="row">
 
                     <div class="col-1">
-                        <!-- Displays number of likes with a heart icon -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ article.number_of_likes }} </strong>
+                        <strong>
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" 
+                            action="{% url 'article_like' article.slug %}" method="POST">
+                            {% csrf_token  %}
+                            <!-- Displays a solid thumbs-up icon if liked by the user -->
+                            {% if liked %}
+                            <button type="submit" name="article_id" value="{{article.slug}}" class="btn-like"><i
+                                    class="fas fa-thumbs-up"></i></button>
+                            <!-- Displays a thumbs-up icon outline if the user has not clicked like -->
+                            {% else %}
+                            <button type="submit" name="article_id" value="{{article.slug}}" class="btn-like"><i
+                                    class="far fa-thumbs-up"></i></button>
+                            {% endif %}
+                            </form>
+                            {% else %}
+                            <!-- Shows an empty icon outline if user is not authenticated -->
+                            <span class="text-secondary"><i class="far fa-thumbs-up"></i></span>
+                            {% endif %}
+                            <!-- Displays number of likes with the thumbs-up icon -->
+                            <span class="text-secondary">{{ article.number_of_likes }}</span>
+                        </strong>
+                        
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
@@ -57,7 +78,7 @@
             <h3>Comments:</h3>
             <div class="card-body">
                 <!-- Iterates through each comment in comments and 
-                    displays appropriate data -->
+                    displays each one that is approved -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">

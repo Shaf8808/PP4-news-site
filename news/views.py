@@ -54,7 +54,7 @@ class ArticleDetail(View):
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
-            # First assigns a post to the comment before saving
+            # First assigns an article to the comment before saving
             comment.article = article
             comment.save()
         else:
@@ -73,3 +73,19 @@ class ArticleDetail(View):
 
             },
         )
+
+
+class ArticleLike(View):
+
+    def post(self, request, slug):
+        # Retriieves specific article
+        article = get_object_or_404(Article, slug=slug)
+        # Checks to see if article has already been liked
+        # before removing it
+        if article.likes.filter(id=request.user.id).exists():
+            article.likes.remove(request.user)
+        # Adds like if it has not been liked
+        else:
+            article.likes.add(request.user)
+        
+        return HttpResponseRedirect(reverse('article_detail', args=[slug]))

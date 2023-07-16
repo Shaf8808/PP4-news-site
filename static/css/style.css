@@ -63,3 +63,18 @@
     background-color: #fff;
     color: #23BBBB;
 }
+
+/* Like button styling */
+
+.btn-like {
+    color: #0e20e0;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #0e20e0;
+    background: transparent;
+    border: none;
+}
