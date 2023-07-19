@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Welcome banner Column -->
+        <div class="col-12 mt-2 left">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-12">
+                        <div class="card-body">
+                            <div class="image-container">
+                                <h2 class="card-title">Welcome to GamesGuide Reviews</h2>
+                                <img class="card-img-top" src="">
+                                <div class="image-flash">
+                                    <p>The hottest reviews 
+                                        of all the latest titles, all in one place</p>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Review list column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for review in review_list %}
+                <div class="col-md-12">
+                    <div class="card mb-12">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if "placeholder" in review.image.url %}
+                                <img class="card-img-top" src="">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ review.image.url }}">
+                                {% endif %}
+                            </div>
+                            <a href="" class="">
+                                <h2 class="card-title">{{ review.title }}</h2>
+                                <p class="card-text">{{ review.excerpt }}</p>
+                            </a>
+                            <div class="image-flash">
+                                <p class="author">Reviewed by: {{ review.reviewer }}</p>
+                            </div>
+                            <hr />
+                            <p class="card-text text-muted h6">{{ review.review_date}} <i class="far fa-thumbs-up"></i>
+                                {{ review.number_of_likes }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{%endblock%}

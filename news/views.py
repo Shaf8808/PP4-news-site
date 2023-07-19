@@ -1,7 +1,11 @@
 from django.shortcuts import render, get_object_or_404, reverse
+from django.contrib import messages
+# For update comments view
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic, View
-from django.http import HttpResponseRedirect
-from .models import Article, Release, Review
+from django.http import HttpResponseRedirect, Http404
+from .models import Article, Release, Review, Comment
 from .forms import CommentForm
 
 
@@ -51,6 +55,7 @@ class ArticleDetail(View):
 
         if comment_form.is_valid():
             # Retrieves user data such as their email and username
+            comment_form.instance.user = request.user
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
@@ -75,6 +80,78 @@ class ArticleDetail(View):
         )
 
 
+class UpdateComment(
+        LoginRequiredMixin, UserPassesTestMixin, 
+        generic.UpdateView
+        ):
+
+    """
+    This view is used to allow logged in users to edit their own comments
+    """
+    model = Comment
+    fields = ['body']
+    template_name = 'edit_comment.html'
+
+    def form_valid(self, form):
+        """
+        This method is called when valid form data has been posted.
+        """
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        return HttpResponseRedirect(self.get_success_url())
+
+    def get_success_url(self):
+        return reverse('article_detail', kwargs={'slug': self.object.article.slug})
+
+    def get_object(self, queryset=None):
+        comment_id = self.kwargs['id']
+        queryset = queryset or self.get_queryset()
+        comment = get_object_or_404(queryset, id=comment_id, user=self.request.user)
+        return comment
+
+    def test_func(self):
+        
+        comment = self.get_object()
+        if self.request.user == comment.user:
+            return True
+        return False
+
+
+
+
+
+class DeleteComment(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+    model = Comment
+    template_name = 'delete_comment.html'
+
+    def get_object(self, queryset=None):
+        comment_id = self.kwargs['id']
+        queryset = queryset or self.get_queryset()
+        comment = get_object_or_404(queryset, id=comment_id, user=self.request.user)
+        return comment
+
+    def test_func(self):
+        # Prevents another user from deleting someone else's
+        # comment
+        comment = self.get_object()
+        if self.request.user == comment.user:
+            return True
+        return False
+
+    def form_invalid(self, form):
+        return HttpResponseRedirect(self.get_success_url())
+
+    def get_success_url(self):
+        return reverse('article_detail', kwargs={'slug': self.object.article.slug})
+
+
+
+
+
+
+
 class ArticleLike(View):
 
     def post(self, request, slug):
@@ -89,3 +166,10 @@ class ArticleLike(View):
             article.likes.add(request.user)
         
         return HttpResponseRedirect(reverse('article_detail', args=[slug]))
+
+
+class ReviewList(generic.ListView):
+    model = Review
+    queryset = Review.objects.order_by('review_date')
+    template_name = 'reviews.html'
+    paginate_by = 7

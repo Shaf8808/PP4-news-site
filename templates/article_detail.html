@@ -88,7 +88,20 @@
                         </span> wrote:
                     </p>
                     {{ comment.body | linebreaks }}
+                    
+                    
+                    
                 </div>
+                <!-- Can edit or delete a comment if it's a registered user -->
+                {% if user.is_authenticated and comment.name == user.username %}
+                
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'update_comment' slug=article.slug id=comment.id %}">Edit
+                    comment</a>
+                <a class="btn btn-warning btn-sm mt-1 mb-1" href="{% url 'erase_comment' slug=article.slug id=comment.id %}">Delete
+                    comment</a>
+                
+
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

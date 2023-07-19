@@ -36,6 +36,7 @@ class ReleaseAdmin(admin.ModelAdmin):
 @admin.register(Review)
 class ReviewAdmin(SummernoteModelAdmin):
 
+    prepopulated_fields = {'slug': ('title',)}
     search_fields = ('title', 'score', 'content', 'reviewer')
     list_display = ('title', 'score', 'reviewer')
     list_filter = ('title', 'score', 'reviewer')

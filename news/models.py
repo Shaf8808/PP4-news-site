@@ -36,6 +36,7 @@ class Article(models.Model):
 class Comment(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE,
                                 related_name="comments")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, related_name="user_comment")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
@@ -66,7 +67,22 @@ class Release(models.Model):
 class Review(models.Model):
     # Data model for review roundup section
     title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=250)
+    excerpt = models.TextField(blank=True)
+    review_date = models.DateField()
     score = models.IntegerField()
     content = models.TextField()
     reviewer = models.CharField(max_length=200)
     image = CloudinaryField('image', default='placeholder')
+    likes = models.ManyToManyField(
+        User, related_name='review_likes', blank=True)
+
+    class Meta:
+        ordering = ["review_date"]
+
+    def __str__(self):
+        return self.title
+    
+    def number_of_likes(self):
+        return self.likes.count()
+
