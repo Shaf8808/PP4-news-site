@@ -6,16 +6,16 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Article heading section -->
-                <h1 class="article-title">{{ article.title }}</h1>
-                <p class="article-subtitle">{{ article.author }} | {{ article.created_on }}</p>
+                <!-- Review heading section -->
+                <h1 class="review-title">{{ review.title }}</h1>
+                <p class="review-subtitle">{{ review.reviewer }} | {{ review.review_date }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- A chosen  default featured image -->
-                {% if "placeholder" in article.featured_image.url %}
+                {% if "placeholder" in review.image.url %}
                 <img src="" width="100%">
                 {% else %}
-                <img src=" {{ article.featured_image.url }}" width="100%">
+                <img src=" {{ review.image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
@@ -26,9 +26,9 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- The article content -->
+                <!-- The review content -->
                 <p class="card-text ">
-                    {{ article.content | safe }}
+                    {{ review.content | safe }}
                 </p>
                 <div class="row">
 
@@ -36,15 +36,15 @@
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" 
-                            action="{% url 'article_like' article.slug %}" method="POST">
+                            action="{% url 'review_like' review.slug %}" method="POST">
                             {% csrf_token  %}
                             <!-- Displays a solid thumbs-up icon if liked by the user -->
                             {% if liked %}
-                            <button type="submit" name="article_id" value="{{article.slug}}" class="btn-like"><i
+                            <button type="submit" name="review_id" value="{{review.slug}}" class="btn-like"><i
                                     class="fas fa-thumbs-up"></i></button>
                             <!-- Displays a thumbs-up icon outline if the user has not clicked like -->
                             {% else %}
-                            <button type="submit" name="article_id" value="{{article.slug}}" class="btn-like"><i
+                            <button type="submit" name="review_id" value="{{review.slug}}" class="btn-like"><i
                                     class="far fa-thumbs-up"></i></button>
                             {% endif %}
                             </form>
@@ -53,7 +53,7 @@
                             <span class="text-secondary"><i class="far fa-thumbs-up"></i></span>
                             {% endif %}
                             <!-- Displays number of likes with the thumbs-up icon -->
-                            <span class="text-secondary">{{ article.number_of_likes }}</span>
+                            <span class="text-secondary">{{ review.number_of_likes }}</span>
                         </strong>
                         
                     </div>
@@ -95,9 +95,9 @@
                 <!-- Can edit or delete a comment if it's a registered user -->
                 {% if user.is_authenticated and comment.name == user.username %}
                 
-                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'update_comment' slug=article.slug id=comment.id %}">Edit
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'update_review_comment' slug=review.slug id=comment.id %}">Edit
                     comment</a>
-                <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'erase_comment' slug=article.slug id=comment.id %}">Delete
+                <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'erase_review_comment' slug=review.slug id=comment.id %}">Delete
                     comment</a>
                 
 

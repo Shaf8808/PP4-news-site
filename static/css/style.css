@@ -5,14 +5,16 @@
     height: 30rem;
 }
 
-/* Styling for article details page */
+/* Styling for article and review details page */
 
-.article-title {
+.article-title, 
+.review-title {
     margin-top: 20%;
     margin-left: 5%;
 }
 
-.article-subtitle {
+.article-subtitle,
+.review-subtitle {
     margin-left: 5%;
     color: lightgray;
 }
@@ -27,7 +29,7 @@
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #1872d2;
     color: white;
     position: relative;
 }
@@ -44,7 +46,7 @@
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #1872d2;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);

@@ -33,22 +33,6 @@ class Article(models.Model):
         return self.likes.count()
 
 
-class Comment(models.Model):
-    article = models.ForeignKey(Article, on_delete=models.CASCADE,
-                                related_name="comments")
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, related_name="user_comment")
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
-
-    class Meta:
-        ordering = ["created_on"]
-
-    def __str__(self):
-        return f"Comment {self.body} by {self.name}"
-
 
 class Release(models.Model):
     # Data model for upcoming releases section
@@ -66,8 +50,9 @@ class Release(models.Model):
 
 class Review(models.Model):
     # Data model for review roundup section
-    title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=250)
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=250, unique=True)
+    status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     review_date = models.DateField()
     score = models.IntegerField()
@@ -86,3 +71,21 @@ class Review(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
+
+class Comment(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE,
+                                related_name="comments", null=True, blank=True)
+    review = models.ForeignKey(Review, on_delete=models.CASCADE,
+                                related_name="review_comments", null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, related_name="user_comment")
+    name = models.CharField(max_length=80)
+    email = models.EmailField(null=True, blank=True)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.name}"

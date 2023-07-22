@@ -39,7 +39,7 @@
                                 <img class="card-img-top" src=" {{ review.image.url }}">
                                 {% endif %}
                             </div>
-                            <a href="" class="">
+                            <a href="{% url 'review_detail' review.slug %}" class="">
                                 <h2 class="card-title">{{ review.title }}</h2>
                                 <p class="card-text">{{ review.excerpt }}</p>
                             </a>
