@@ -5,6 +5,9 @@ from django.urls import path
 urlpatterns = [
     path('', views.ArticleList.as_view(), name='home'),
     path('reviews/', views.ReviewList.as_view(), name='review_list'),
+    path('addarticle/', views.PostArticle.as_view(), name='add_article'),
+    path('addreview/', views.PostReview.as_view(), name='add_review'),
+    path('addrelease/', views.PostRelease.as_view(), name='add_release'),
     path('<slug:slug>/', views.ArticleDetail.as_view(), name='article_detail'),
     path('<slug:slug>/edit_review_comment/<int:id>', views.UpdateReviewComment.as_view(), name='update_review_comment'),
     path('<slug:slug>/delete_review_comment/<int:id>', views.DeleteReviewComment.as_view(), name='erase_review_comment'),

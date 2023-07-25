@@ -39,13 +39,13 @@
                     </li>
                     {% if user.is_superuser %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Add Article</a>
+                        <a class="nav-link" href="{% url 'add_article' %}">Add Article</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Add Review</a>
+                        <a class="nav-link" href="{% url 'add_review' %}">Add Review</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Add Release</a>
+                        <a class="nav-link" href="{% url 'add_release' %}">Add Release</a>
                     </li>
                     {% endif %}
                     {% if user.is_authenticated %}

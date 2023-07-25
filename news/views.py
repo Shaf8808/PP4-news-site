@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic, View
 from django.http import HttpResponseRedirect, Http404
 from .models import Article, Release, Review, Comment
-from .forms import CommentForm
+from .forms import CommentForm, ArticleForm, ReviewForm, ReleaseForm
 
 
 class ArticleList(generic.ListView):
@@ -18,6 +18,45 @@ class ArticleList(generic.ListView):
         context = super(ArticleList, self).get_context_data(*args, **kwargs)
         context['release_list'] = Release.objects.order_by("-release_date")
         return context
+
+
+
+class PostArticle(LoginRequiredMixin, generic.CreateView):
+    form_class = ArticleForm
+    template_name = 'add_article.html'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        return HttpResponseRedirect(self.get_success_url())
+
+    def get_success_url(self):
+        return reverse('home')
+
+
+class PostReview(LoginRequiredMixin, generic.CreateView):
+    form_class = ReviewForm
+    template_name = 'add_review.html'
+
+    def form_valid(self, form):
+        form.instance.reviewer = self.request.user
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('review_list')
+
+
+class PostRelease(LoginRequiredMixin, generic.CreateView):
+    form_class = ReleaseForm
+    template_name = 'add_release.html'
+
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('home')
 
 
 class ArticleDetail(View):
@@ -65,7 +104,12 @@ class ArticleDetail(View):
         else:
             # Returns an empty comment form instance if it is NOT valid
             comment_form = CommentForm()
-        
+
+        # if request.user.is_superuser():
+        #     article.comment.approved = True
+        # else:
+        #     article.comment.approved = False
+
         return render(
             request,
             "article_detail.html",
@@ -79,7 +123,7 @@ class ArticleDetail(View):
             },
         )
 
-
+        
 
 
 class UpdateComment(
@@ -144,10 +188,6 @@ class DeleteComment(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView)
 
     def get_success_url(self):
         return reverse('article_detail', kwargs={'slug': self.object.article.slug})
-
-
-
-
 
 
 class ArticleLike(View):
@@ -314,3 +354,6 @@ class ReviewLike(View):
             review.likes.add(request.user)
         
         return HttpResponseRedirect(reverse('review_detail', args=[slug]))
+
+
+
