@@ -1,6 +1,5 @@
 from .models import Comment, Article, Review, Release
 from django import forms
-from cloudinary.models import CloudinaryField
 
 
 class CommentForm(forms.ModelForm):

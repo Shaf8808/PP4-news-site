@@ -17,6 +17,10 @@ Adding crud functionality to my site was undoubtedly one of the most challenging
 
 Including null=True to my review and article fields in my Comment data model ensured that the fields could be null meaning I don't have to provide data for those fields when posting comments on either the articles page or reviews page.
 
+
+I was having some issues with posting an image through my form I created in Django, as everything else was being posted successfully. I managed to, however, with some help from tutor support identify the problem which was the enctype="multipart/form-data" attribute. This is set to text by default, which I needed to change in order to successfully post an image.
+
+
 Credits
 
 Tutoring

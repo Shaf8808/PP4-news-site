@@ -11,7 +11,7 @@
         {% if user.is_superuser %}
         <div class="col-11 col-md-8 col-lg-6 mt-3">
             <!--  Edit Article Form -->
-            <form method="post" class="mb-5">
+            <form enctype="multipart/form-data" method="post" class="mb-5">
                 {{ form | crispy }}
                 {% csrf_token %}
                 <button type="submit" class="btn btn-outline-dark">Submit</button>

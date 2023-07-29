@@ -53,6 +53,14 @@ class EditArticle (LoginRequiredMixin,
         return reverse('home')
 
 
+class DeleteArticle(LoginRequiredMixin, generic.DeleteView):
+    model = Article
+    template_name = 'delete_article.html'
+    
+    def get_success_url(self):
+        return reverse('home')
+
+
 class PostReview(LoginRequiredMixin, generic.CreateView):
     form_class = ReviewForm
     template_name = 'add_review.html'

@@ -10,6 +10,7 @@ urlpatterns = [
     path('addrelease/', views.PostRelease.as_view(), name='add_release'),
     path('<slug:slug>/', views.ArticleDetail.as_view(), name='article_detail'),
     path('<slug:slug>/edit_article/', views.EditArticle.as_view(), name='update_article'),
+    path('<slug:slug>/delete_article/', views.DeleteArticle.as_view(), name='delete_article'),
     path('<slug:slug>/edit_review_comment/<int:id>', views.UpdateReviewComment.as_view(), name='update_review_comment'),
     path('<slug:slug>/delete_review_comment/<int:id>', views.DeleteReviewComment.as_view(), name='erase_review_comment'),
     path('reviews/<slug:slug>/', views.ReviewDetail.as_view(), name='review_detail'),

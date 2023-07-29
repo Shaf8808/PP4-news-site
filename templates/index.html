@@ -77,7 +77,7 @@
                                     href="{% url 'update_article' article.slug %}">Edit
                                     article</a>
                                 <a class="btn btn-danger btn-sm mt-1 mb-1"
-                                    href="">Delete
+                                    href="{% url 'delete_article' article.slug %}">Delete
                                     article</a>
                             {% endif %}
 
