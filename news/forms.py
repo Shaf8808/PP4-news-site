@@ -1,5 +1,6 @@
 from .models import Comment, Article, Review, Release
 from django import forms
+from cloudinary.models import CloudinaryField
 
 
 class CommentForm(forms.ModelForm):
@@ -11,7 +12,8 @@ class CommentForm(forms.ModelForm):
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
-        fields = ('title', 'featured_image', 'slug', 'excerpt', 'content', 'status',)
+        fields = ('title', 'slug', 'featured_image',
+                  'content', 'excerpt', 'status',)
 
 
 class ReviewForm(forms.ModelForm):

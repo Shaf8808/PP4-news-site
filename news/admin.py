@@ -11,6 +11,11 @@ class ArticleAdmin(SummernoteModelAdmin):
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
     summernote_fields = ('content')
+    actions = ['publish_articles']
+
+    # Give option to quickly publish draft articles from panel
+    def publish_articles(self, request, queryset):
+        queryset.update(status=1)
 
 
 @admin.register(Comment)

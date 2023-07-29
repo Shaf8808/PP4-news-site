@@ -20,8 +20,8 @@ class ArticleList(generic.ListView):
         return context
 
 
-
 class PostArticle(LoginRequiredMixin, generic.CreateView):
+    model = Article
     form_class = ArticleForm
     template_name = 'add_article.html'
 
@@ -32,6 +32,23 @@ class PostArticle(LoginRequiredMixin, generic.CreateView):
     def form_invalid(self, form):
         return HttpResponseRedirect(self.get_success_url())
 
+    def get_success_url(self):
+        return reverse('home')
+
+
+class EditArticle (LoginRequiredMixin, 
+                   generic.UpdateView):
+    model = Article
+    form_class = ArticleForm
+    template_name = 'edit_article.html'
+
+    def form_valid(self, form):
+        """
+        This method is called when valid form data has been posted.
+        """
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+    
     def get_success_url(self):
         return reverse('home')
 
@@ -105,10 +122,6 @@ class ArticleDetail(View):
             # Returns an empty comment form instance if it is NOT valid
             comment_form = CommentForm()
 
-        # if request.user.is_superuser():
-        #     article.comment.approved = True
-        # else:
-        #     article.comment.approved = False
 
         return render(
             request,
@@ -122,7 +135,6 @@ class ArticleDetail(View):
 
             },
         )
-
         
 
 
@@ -354,6 +366,3 @@ class ReviewLike(View):
             review.likes.add(request.user)
         
         return HttpResponseRedirect(reverse('review_detail', args=[slug]))
-
-
-

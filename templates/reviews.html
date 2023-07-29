@@ -16,7 +16,7 @@
                                 <img class="card-img-top" src="">
                                 <div class="image-flash">
                                     <p>The hottest reviews 
-                                        of all the latest titles, all in one place</p>
+                                        of the latest titles, all in one place</p>
                                 </div>
                             </div>
                             <hr />
@@ -52,6 +52,13 @@
                             <hr />
                             <p class="card-text text-muted h6">{{ review.review_date}} <i class="far fa-thumbs-up"></i>
                                 {{ review.number_of_likes }}</p>
+                            <!-- Only allows an admin to edit and delete reviews -->
+                            {% if user.is_superuser %}
+                            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="">Edit
+                                review</a>
+                            <a class="btn btn-danger btn-sm mt-1 mb-1" href="">Delete
+                                review</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
