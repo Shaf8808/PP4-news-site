@@ -43,6 +43,10 @@ class ReviewAdmin(SummernoteModelAdmin):
 
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ('title', 'score', 'content', 'reviewer')
-    list_display = ('title', 'score', 'reviewer')
+    list_display = ('title', 'score', 'status', 'reviewer')
     list_filter = ('title', 'score', 'reviewer')
     summernote_fields = ('content')
+    actions = ['publish_reviews']
+
+    def publish_reviews(self, request, queryset):
+        queryset.update(status=1)

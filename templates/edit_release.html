@@ -1,21 +1,21 @@
 {% extends "base.html" %}
-{% block title %}GamesGuide | Add Review{% endblock %}
+{% block title %}GamesGuide | Edit Release{% endblock %}
 {% block content %}
 {% load crispy_forms_tags %}
 
 <div class="container">
-    <h1 class="page-title">Add Review</h1>
+    <h1 class="page-title">Edit Release</h1>
     <hr class="home-break">
     <br>
     <div class="row justify-content-center ">
-        {% if user.is_authenticated %}
+        {% if user.is_superuser %}
         <div class="col-11 col-md-8 col-lg-6 mt-3">
-            <!--  Add Review Form -->
+            <!--  Edit Article Form -->
             <form enctype="multipart/form-data" method="post" class="mb-5">
                 {{ form | crispy }}
                 {% csrf_token %}
                 <button type="submit" class="btn btn-outline-dark">Submit</button>
-                <a class="btn btn btn-outline-dark m-2" href="{%  url 'review_list' %}">Cancel</a>
+                <a class="btn btn btn-outline-dark m-2" href="{%  url 'home' %}">Cancel</a>
             </form>
         </div>
         {% endif %}

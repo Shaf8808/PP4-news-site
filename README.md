@@ -4,9 +4,17 @@ Summernote - wysiwyg text editor
 
 Changing the login templates of Django Allauth (login, signup html files etc.) to improve UI and inherit styling of my own templates and css
 
-Make sure to detail the ability for the site admin to post articles, reviews and releases through the website
+Make sure to detail the ability for the site admin to post articles, reviews and releases through the website, as well as the ability to edit and delete them.
 
-Testing
+**3 types of Users:**
+
+A user who is not authenticated and doesn't have an account
+
+A user who IS authenticated and has a registered account on the site
+
+A superuser (myself) who is the administrator (and builder) of the site with special privileges
+
+**Testing**
 
 An error with data type being an integear unable to be converted to a datetimefield
 

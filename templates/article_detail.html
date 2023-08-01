@@ -109,9 +109,18 @@
             <div class="card-body">
                 <!-- If a user comment has not been approved -->
                 {% if commented %}
-                <div class="alert alert-success" role="alert">
+                <div id="msg" class="alert alert-success" role="alert">
                     Your comment is awaiting approval
                 </div>
+                <!-- Displays the comment form once more after a user
+                leaves a comment -->
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
                 {% else %}
                 <!-- Can only leave a comment if a user has an account -->
                 {% if user.is_authenticated %}

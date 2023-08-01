@@ -61,6 +61,14 @@ class DeleteArticle(LoginRequiredMixin, generic.DeleteView):
         return reverse('home')
 
 
+class ReviewList(generic.ListView):
+    # View for displaying list of reviews on the review page
+    model = Review
+    queryset = Review.objects.filter(status=1).order_by("review_date")
+    template_name = "reviews.html"
+    paginate_by = 7
+
+
 class PostReview(LoginRequiredMixin, generic.CreateView):
     form_class = ReviewForm
     template_name = 'add_review.html'
@@ -69,6 +77,23 @@ class PostReview(LoginRequiredMixin, generic.CreateView):
         form.instance.reviewer = self.request.user
         return super().form_valid(form)
 
+    def get_success_url(self):
+        return reverse('review_list')
+
+
+class EditReview (LoginRequiredMixin, 
+                  generic.UpdateView):
+    model = Review
+    form_class = ReviewForm
+    template_name = 'edit_review.html'
+
+    def form_valid(self, form):
+        """
+        This method is called when valid form data has been posted.
+        """
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+    
     def get_success_url(self):
         return reverse('review_list')
 
@@ -82,6 +107,39 @@ class PostRelease(LoginRequiredMixin, generic.CreateView):
 
     def get_success_url(self):
         return reverse('home')
+
+
+class EditRelease (LoginRequiredMixin, 
+                   generic.UpdateView):
+    model = Release
+    form_class = ReleaseForm
+    template_name = 'edit_release.html'
+
+    def form_valid(self, form):
+        """
+        This method is called when valid form data has been posted.
+        """
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+    
+    def get_success_url(self):
+        return reverse('home')
+
+
+class DeleteRelease(LoginRequiredMixin, generic.DeleteView):
+    model = Release
+    template_name = 'delete_release.html'
+    
+    def get_success_url(self):
+        return reverse('home')
+
+
+class DeleteReview(LoginRequiredMixin, generic.DeleteView):
+    model = Review
+    template_name = 'delete_review.html'
+    
+    def get_success_url(self):
+        return reverse('review_list')
 
 
 class ArticleDetail(View):
@@ -130,7 +188,6 @@ class ArticleDetail(View):
             # Returns an empty comment form instance if it is NOT valid
             comment_form = CommentForm()
 
-
         return render(
             request,
             "article_detail.html",
@@ -144,7 +201,6 @@ class ArticleDetail(View):
             },
         )
         
-
 
 class UpdateComment(
         LoginRequiredMixin, UserPassesTestMixin, 
@@ -224,14 +280,7 @@ class ArticleLike(View):
             article.likes.add(request.user)
         
         return HttpResponseRedirect(reverse('article_detail', args=[slug]))
-
-
-class ReviewList(generic.ListView):
-    # View for displaying list of reviews on the review page
-    model = Review
-    queryset = Review.objects.order_by('review_date')
-    template_name = 'reviews.html'
-    paginate_by = 7
+    
 
 
 class ReviewDetail(View):

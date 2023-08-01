@@ -37,6 +37,7 @@ class Article(models.Model):
 class Release(models.Model):
     # Data model for upcoming releases section
     name = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=250, unique=True)
     release_date = models.DateTimeField()
     platform = models.CharField(max_length=20)
     release_image = CloudinaryField('image', default='placeholder')

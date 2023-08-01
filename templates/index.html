@@ -29,14 +29,19 @@
                             <h2>Hottest Releases of the month</h2>
                             <ul>
                                 {% for release in release_list %}
-                                <li> {{ release.release_image }} {{ release.name }}
-                                    {{ release.release_date }} {{ release.platform }}
+                                <li><img class="img-fluid rounded
+                                                 w-25"
+                                        src=" {{ release.release_image.url }}" alt="">
+                                        <p>{{ release.name }}
+                                        {{ release.release_date }} {{ release.platform }}</p>
                                 </li>
                                 <!-- Only allows an admin to edit and delete releases -->
                                 {% if user.is_superuser %}
-                                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="">Edit
+                                <a class="btn btn-secondary btn-sm mt-1 mb-1"
+                                    href="{% url 'edit_release' release.slug %}">Edit
                                     release</a>
-                                <a class="btn btn-danger btn-sm mt-1 mb-1" href="">Delete
+                                <a class="btn btn-danger btn-sm mt-1 mb-1"
+                                    href="{% url 'delete_release' release.slug %}">Delete
                                     release</a>
                                 {% endif %}
                                 {% endfor %}
