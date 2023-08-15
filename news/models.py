@@ -40,7 +40,6 @@ class Release(models.Model):
     slug = models.SlugField(max_length=250, unique=True)
     release_date = models.DateTimeField()
     platform = models.CharField(max_length=20)
-    release_image = CloudinaryField('image', default='placeholder')
 
     class Meta:
         ordering = ["-release_date"]
