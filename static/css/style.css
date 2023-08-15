@@ -3,6 +3,13 @@ ul {
     padding-left: initial;
 }
 
+/* Navbar styling */
+
+.navbar {
+    background-color: #1872d2;
+    margin-bottom: 10px;
+}
+
 .card-img,
 .card-img-bottom,
 .card-img-top {
@@ -92,6 +99,12 @@ svg {
     border: none;
 }
 
+/* Release info styling */
+
+.release-info {
+    margin-bottom: 5px;
+}
+
 /* Masthead text responsive styling */
 
 /* @media (min-width: 1000px)
@@ -104,3 +117,9 @@ svg {
 /* .d-md-block {
     display: block !important;
 } */
+
+@media only screen and (max-width: 768px) {
+.release-info {
+    text-align: center;
+}
+}
