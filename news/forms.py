@@ -25,4 +25,4 @@ class ReviewForm(forms.ModelForm):
 class ReleaseForm(forms.ModelForm):
     class Meta:
         model = Release
-        fields = ('name', 'slug', 'release_image', 'release_date', 'platform',)
+        fields = ('name', 'slug', 'release_date', 'platform',)
