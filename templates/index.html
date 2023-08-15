@@ -10,13 +10,11 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="card mb-9">
+                        <h2 class="card-header">Welcome to GamesGuide</h2>
                         <div class="card-body">
                             <div class="image-container">
-                                <h2 class="card-title">Welcome to GamesGuide</h2>
-                                <img class="card-img-top" src="">
-                                <div class="image-flash">
-                                    
-                                </div>
+                                {% load static %}
+                                <img class="img-fluid" src="{% static 'homepage-gaming-image.jpg' %}">
                             </div>
                             <hr />
                         </div>
@@ -24,16 +22,23 @@
                 </div>
                 <!-- Top releases of the month column -->
                 <div class="col-md-3">
-                    <div class="card mb-3">
+                    <div class="card text-white bg-secondary mb-3">
+                        <h2 class="card-header text-center">Hottest Releases of the month</h2>
                         <div class="card-body">
-                            <h2>Hottest Releases of the month</h2>
-                            <ul>
+                        <ul>
                                 {% for release in release_list %}
-                                <li><img class="img-fluid rounded
-                                                 w-25"
-                                        src=" {{ release.release_image.url }}" alt="">
-                                        <p>{{ release.name }}
-                                        {{ release.release_date }} {{ release.platform }}</p>
+                                <li class="d-flex justify-content-between align-items-center">
+                                        {{ release.name }}
+                                        {{ release.release_date }}
+                                {% if release.platform == "Playstation" %}
+                                        <span class="badge rounded-pill bg-primary">{{ release.platform }}</span>
+                                {% elif release.platform == "Xbox" %}
+                                        <span class="badge rounded-pill bg-success">{{ release.platform }}</span>
+                                {% elif release.platform == "Nintendo" %}
+                                <span class="badge rounded-pill bg-danger">{{ release.platform }}</span>
+                                {% else %}
+                                        <span class="badge rounded-pill bg-warning text-dark">{{ release.platform }}</span>
+                                {% endif %}
                                 </li>
                                 <!-- Only allows an admin to edit and delete releases -->
                                 {% if user.is_superuser %}
@@ -63,7 +68,7 @@
                                 {% if "placeholder" in article.featured_image.url %}
                                 <img class="card-img-top" src="">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ article.featured_image.url }}">
+                                <img class="img-fluid" src=" {{ article.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ article.author }}</p>
