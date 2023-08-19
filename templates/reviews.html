@@ -6,14 +6,16 @@
     <div class="row">
 
         <!-- Welcome banner Column -->
-        <div class="col-12 mt-2 left">
+        <div class="col-12">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card mb-12">
                         <div class="card-body">
+                            <h2 class="card-header">Welcome to GamesGuide Reviews</h2>
                             <div class="image-container">
-                                <h2 class="card-title">Welcome to GamesGuide Reviews</h2>
-                                <img class="card-img-top" src="">
+                                {% load static %}
+                                <img class="img-fluid rounded review-image"
+                                    src="{% static 'review-image.jpg' %}">
                                 <div class="image-flash">
                                     <p>The hottest reviews
                                         of the latest titles, all in one place</p>
@@ -34,21 +36,21 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in review.image.url %}
-                                <img class="card-img-top" src="">
+                                <img class="img-fluid rounded" src="">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ review.image.url }}">
+                                <img class="img-fluid rounded" src=" {{ review.image.url }}">
                                 {% endif %}
                             </div>
                             <a href="{% url 'review_detail' review.slug %}" class="">
-                                <h2 class="card-title">{{ review.title }}</h2>
+                            <h2 class="card-title">{{ review.title }}</h2>
                                 <p class="card-text">{{ review.excerpt }}</p>
+                                <div class="image-flash">
+                                    <p class="author">Reviewed by: {{ review.reviewer }}</p>
+                                </div>
+                                <div class="image-flash">
+                                    <p class="author">Final Score: {{ review.score }}</p>
+                                </div>
                             </a>
-                            <div class="image-flash">
-                                <p class="author">Reviewed by: {{ review.reviewer }}</p>
-                            </div>
-                            <div class="image-flash">
-                                <p class="author">Final Score: {{ review.score }}</p>
-                            </div>
                             <hr />
                             <p class="card-text text-muted h6">{{ review.review_date}} <i class="far fa-thumbs-up"></i>
                                 {{ review.number_of_likes }}</p>
@@ -65,8 +67,8 @@
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </div>
 {%endblock%}
