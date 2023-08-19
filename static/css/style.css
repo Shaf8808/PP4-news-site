@@ -3,6 +3,71 @@ ul {
     padding-left: initial;
 }
 
+/* Horizontal rule */
+
+hr {
+    color: #fff;
+}
+
+/* Headers */
+
+h1, h2 {
+    color: #fff;
+}
+
+h3 {
+    margin-top: 10px;
+    color: #fff;
+}
+
+/* Labels */
+
+label {
+    color: #fff;
+}
+
+/* Icons */
+
+i {
+    color: #fff;
+}
+
+/* Paragraphs */
+
+p {
+    color: #fff;
+}
+
+/* Anchor */
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0a58ca;
+}
+
+/* Body styling */
+
+.main-body {
+    background-color: #0a4b6c;
+}
+
+/* Review main image */
+
+.review-image {
+    margin: 20px 0 10px;
+}
+
+/* Card styling */
+
+.card {
+    background-color: #0a4b6c;
+    border: 1px solid rgba(223, 215, 215, 0.125)
+}
+
 /* Navbar styling */
 
 .navbar {
