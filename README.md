@@ -40,6 +40,14 @@ https://www.sliderrevolution.com/resources/css-text-animation/
 Mortal Kombat article:
 https://www.ign.com/articles/mortal-kombat-1-pre-order-beta-johnny-cage-ps5-xbox
 
+Images:
+
+Texas Chainsaw Massacre:
+https://images.app.goo.gl/vrbBbdUFDb5qFqJU6
+
+Shadow Gambit the Cursed Crew:
+https://images.app.goo.gl/6BiRYQNq6CMCq7jm7
+
 Tutoring
 
 Stack Overflow
