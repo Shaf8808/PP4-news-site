@@ -32,14 +32,14 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for review in review_list %}
-                <div class="col-md-12">
-                    <div class="card mb-12">
+                <div class="col-md-6">
+                    <div class="card mb-6">
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in review.image.url %}
-                                <img class="img-fluid rounded" src="">
+                                <img class="img-fluid rounded-img" src="">
                                 {% else %}
-                                <img class="img-fluid rounded" src=" {{ review.image.url }}">
+                                <img class="img-fluid rounded-img" src=" {{ review.image.url }}">
                                 {% endif %}
                             </div>
                             <a href="{% url 'review_detail' review.slug %}" class="">
@@ -67,8 +67,13 @@
                         </div>
                     </div>
                 </div>
+                {% if forloop.counter|divisibleby:2 %}
             </div>
-            {% endfor %}
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+
+            </div>
         </div>
     </div>
 </div>
