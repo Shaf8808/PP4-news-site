@@ -31,6 +31,15 @@ I was having some issues with posting an image through my form I created in Djan
 
 Credits
 
+Review header text styling:
+https://codepen.io/mireille1306/pen/BawdXzY
+
+Review header text animation
+https://www.sliderrevolution.com/resources/css-text-animation/
+
+Mortal Kombat article:
+https://www.ign.com/articles/mortal-kombat-1-pre-order-beta-johnny-cage-ps5-xbox
+
 Tutoring
 
 Stack Overflow
