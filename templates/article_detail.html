@@ -28,6 +28,9 @@
             <div class="card-body">
                 <!-- The article content -->
                 <p class="card-text ">
+                    {% if article.content.length == '350' %}
+                    {{ newline }}
+                    {% endif %}
                     {{ article.content | safe }}
                 </p>
                 <div class="row">
@@ -66,11 +69,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <hr>
         </div>
     </div>
     <div class="row">
