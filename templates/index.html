@@ -9,14 +9,13 @@
         <div class="col-12 mt-2 left">
             <div class="row">
                 <div class="col-md-9">
-                    <div class="card mb-9">
+                    <div class="welcome-card card mb-9">
                         <h2 class="card-header">Welcome to GamesGuide</h2>
                         <div class="card-body">
                             <div class="image-container">
                                 {% load static %}
-                                <img class="img-fluid" src="{% static 'homepage-gaming-image.jpg' %}">
+                                <img class="img-fluid rounded" src="{% static 'homepage-gaming-image.jpg' %}">
                             </div>
-                            <hr />
                         </div>
                     </div>
                 </div>
@@ -40,6 +39,7 @@
                                         <span class="badge rounded-pill bg-warning text-dark">{{ release.platform }}</span>
                                 {% endif %}
                                 </li>
+                                <hr>
                                 <!-- Only allows an admin to edit and delete releases -->
                                 {% if user.is_superuser %}
                                 <a class="btn btn-secondary btn-sm mt-1 mb-1"
@@ -51,7 +51,6 @@
                                 {% endif %}
                                 {% endfor %}
                             </ul>
-                            <hr />
                         </div>
                     </div>
                 </div>
@@ -66,9 +65,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in article.featured_image.url %}
-                                <img class="card-img-top" src="">
+                                <img class="img-fluid rounded" src="">
                                 {% else %}
-                                <img class="img-fluid" src=" {{ article.featured_image.url }}">
+                                <img class="img-fluid rounded" src=" {{ article.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ article.author }}</p>
@@ -79,7 +78,7 @@
                                 <p class="card-text">{{ article.excerpt }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">{{ article.created_on}} <i class="far fa-thumbs-up"></i>
+                            <p class="card-text h6">{{ article.created_on}} <i class="far fa-thumbs-up"></i>
                                 {{ article.number_of_likes }}</p>
                             <!-- Only allows an admin to edit and delete articles -->
                             {% if user.is_superuser %}
