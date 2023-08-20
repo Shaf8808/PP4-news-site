@@ -14,7 +14,7 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% load static %}
-                                <img class="img-fluid rounded" src="{% static 'homepage-gaming-image.jpg' %}">
+                                <img class="img-fluid rounded-img" src="{% static 'homepage-gaming-image.jpg' %}">
                             </div>
                         </div>
                     </div>
@@ -65,9 +65,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in article.featured_image.url %}
-                                <img class="img-fluid rounded" src="">
+                                <img class="img-fluid rounded-img" src="">
                                 {% else %}
-                                <img class="img-fluid rounded" src=" {{ article.featured_image.url }}">
+                                <img class="img-fluid rounded-img" src=" {{ article.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ article.author }}</p>
