@@ -30,9 +30,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-shaf8808-pp4newssite-enoaml13zw6.ws-us103.gitpod.io', 'pp4-news-site-3458881b171b.herokuapp.com']
+ALLOWED_HOSTS = ['8000-shaf8808-pp4newssite-enoaml13zw6.ws-us104.gitpod.io', 'pp4-news-site-3458881b171b.herokuapp.com']
 
 
 # Application definition
