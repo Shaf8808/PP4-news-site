@@ -287,12 +287,7 @@ a:hover {
     z-index: 100;
 }
 
-/* img,
-svg {
-    vertical-align: middle;
-    position: relative;
-    top: -16rem;
-} */
+
 /* Sign-Up button styling */
 
 .btn-signup {
@@ -327,21 +322,14 @@ svg {
     margin-bottom: 5px;
 }
 
-/* Masthead text responsive styling */
+/* Masthead and release responsive styling */
 
-/* @media (min-width: 1000px)
-.col-md-6 {
-    flex: 0 0 auto;
-    width : 50%;
-} */
-/* Masthead image responsive styling */
-
-/* .d-md-block {
-    display: block !important;
-} */
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
 .release-info {
     text-align: center;
+}
+
+.masthead {
+    height: 19vh;
 }
 }
