@@ -28,7 +28,7 @@
             <div class="card-body">
                 <!-- The review content -->
                 <p class="card-text ">
-                    {{ review.content | safe }}
+                    {{ review.content|linebreaks }}
                 </p>
                 <p class="card-text">
                     Final Score: {{ review.score }}
