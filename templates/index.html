@@ -8,26 +8,26 @@
         <!-- Welcome banner Column -->
         <div class="col-12 mt-2 left">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <div class="welcome-card card mb-9">
                         <h2 class="card-header">Welcome to GamesGuide</h2>
                         <div class="card-body">
                             <div class="image-container">
                                 {% load static %}
-                                <img class="img-fluid rounded-img" src="{% static 'homepage-gaming-image.jpg' %}">
+                                <img class="img-fluid rounded-img" src="{% static './images/homepage-gaming-image.jpg' %}">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Top releases of the month column -->
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="card text-white bg-secondary mb-3">
                         <h2 class="card-header text-center">Hottest Releases of the month</h2>
                         <div class="card-body">
                         <ul>
                                 {% for release in release_list %}
                                 <li class="d-flex justify-content-between align-items-center">
-                                        {{ release.name }}
+                                        <strong>{{ release.name }}</strong>
                                         {{ release.release_date }}
                                 {% if release.platform == "Playstation" %}
                                         <span class="badge rounded-pill bg-primary">{{ release.platform }}</span>
