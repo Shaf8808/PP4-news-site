@@ -11,16 +11,20 @@ Click [here](./README.md) to be redirected back to the original Readme document
 - [Device Testing](#device-testing)
 - [Manual Testing](#manual-testing)
   * [Site Navigation](#site-navigation)
-  * [Home Page](#home-page)
-  * [Browse Recipes Page](#browse-recipes-page)
-  * [Recipe Detail Page](#recipe-detail-page)
-  * [Add Recipe Page](#add-recipe-page)
-  * [Update Recipe Page](#update-recipe-page)
-  * [Confirm Delete Recipe Page](#confirm-delete-recipe-page)
-  * [My Recipes Page](#my-recipes-page)
-  * [My Bookmarks Page](#my-bookmarks-page)
-  * [My Meal Plan Page](#my-meal-plan-page)
-  * [Django All Auth Pages](#django-all-auth-pages)
+  * [Add Article](#add-article-page)
+  * [Add Review](#add-review-page)
+  * [Add Release](#add-release-page)
+  * [Editing articles](#editing-articles)
+  * [Deleting articles](#deleting-articles)
+  * [Editing reviews](#editing-reviews)
+  * [Deleting reviews](#deleting-reviews)
+  * [Editing releases](#editing-releases)
+  * [Deleting releases](#deleting-releases)
+  * [User interactivity](#deleting-releases)
+  * [Deleting releases](#deleting-releases)
+  * [Deleting releases](#deleting-releases)
+  * [Deleting releases](#deleting-releases)
+  * [Deleting releases](#deleting-releases)
 - [Bugs](#bugs)
   * [Fixed Bugs](#fixed-bugs)
     + 
@@ -108,7 +112,7 @@ The website was tested on different browsers such as Google Chrome, Safari and F
 
 ## Device Testing
 
-My site was meticulously tested and viewed multiple times on desktop, laptop and mobile phones in order to see if the structure and layout of the site remained uncompromised. It holds up well regardless of the device it is being viewed on. I also utilised Chrome develope tools to check this, with positive results.
+My site was meticulously tested and viewed multiple times on desktop, laptop and mobile phones in order to see if the structure and layout of the site remained uncompromised. It holds up well regardless of the device it is being viewed on. I also utilised Chrome developer tools to check this, with positive results.
 
 ## Manual Testing
 
@@ -194,6 +198,8 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 | Cancel button    | Click    | Redirects to review page                 | Pass      |
 
 
+[Back to top](#table-of-contents)
+
 ### Add Release page
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
@@ -203,6 +209,7 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 | Slug field            | Display      | Displays field                                              | Pass      |
 | Release date field            | Display      | Displays field                                              | Pass      |
 | Platform field            | Display      | Displays field                                              | Pass      |
+| Badges             | Display      | Adds appropriately styled badge depending on the release platform                                              | Pass      |
 | Submit button    | Click    | Creates new release item and displays it on homepage releases section                 | Pass      |
 | Submit button    | Click    | Informs user of any empty fields if there are any before submitting                | Pass      |
 | Cancel button    | Click    | Redirects to homepage                 | Pass      |
@@ -212,14 +219,104 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
 | NavBar                | Display    | Shows navbar on form page                                          | Pass      |
-| Fields            | Display    | Displays all fields filled with correct data                       | Pass      |
+| Fields            | Display    | Displays all fields filled with the correct data                       | Pass      |
 | Submit button    | Click/Display    | Updates correct article with new data and displays it on homepage                 | Pass      |
 | Submit button    | Click/Display    | Informs user of any empty fields if there are any before submitting                | Pass      |
 | Cancel button    | Click/Display    | Redirects to homepage                 | Pass      |
 
 
+### Deleting articles
+
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| NavBar                | Display    | Shows navbar on page                                          | Pass      |
+| Message            | Display    | Displays an appropriate delete message                       | Pass      |
+| Delete button    | Click/Display    | Deletes correct article and removes it from the homepage                 | Pass      |
+| Cancel button    | Click/Display    | Redirects to homepage                 | Pass      |
 
 
+### Editing reviews
+
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| NavBar                | Display    | Shows navbar on form page                                          | Pass      |
+| Fields            | Display    | Displays all fields filled with the correct data                       | Pass      |
+| Submit button    | Click/Display    | Updates correct review with new data and displays it on homepage                 | Pass      |
+| Submit button    | Click/Display    | Informs user of any empty fields if there are any before submitting                | Pass      |
+| Cancel button    | Click/Display    | Redirects to review page                 | Pass      |
+
+
+### Deleting reviews
+
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| NavBar                | Display    | Shows navbar on page                                          | Pass      |
+| Message            | Display    | Displays an appropriate delete message                       | Pass      |
+| Delete button    | Click/Display    | Deletes correct review and removes it from the review page                 | Pass      |
+| Cancel button    | Click/Display    | Redirects to review page                 | Pass      |
+
+
+[Back to top](#table-of-contents)
+
+### Editing releases
+
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| NavBar                | Display    | Shows navbar on form page                                          | Pass      |
+| Fields            | Display    | Displays all fields filled with the correct data                       | Pass      |
+| Submit button    | Click/Display    | Updates correct release with new data and displays it on homepage                 | Pass      |
+| Submit button    | Click/Display    | Informs user of any empty fields if there are any before submitting                | Pass      |
+| Cancel button    | Click/Display    | Redirects to homepage                 | Pass      |
+
+
+### Deleting releases
+
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| NavBar                | Display    | Shows navbar on page                                          | Pass      |
+| Message            | Display    | Displays an appropriate delete message                       | Pass      |
+| Delete button    | Click/Display    | Deletes correct release data and removes it from the homepage                 | Pass      |
+| Cancel button    | Click/Display    | Redirects to homepage                 | Pass      |
+
+
+### User interactivity
+
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Like and comment icon              | Display    | Shows number of likes and comments for each article/review                                          | Pass      |
+| Like            | Display/Click    | Lets the user 'like' an article/review                       | Pass      |
+| Comment form    | Display    | Displays the comment form on an article/review only for authenticated users                 | Pass      |
+| Comment submit    | Click/Display    | Allows the user to comment on an article/review                 | Pass      |
+| Comment approval message    | Display    | Informs user their comment is awaiting approval once posted                 | Pass      |
+
+### User authentication
+
+#### Register
+
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Register              | Display    | Shows all relevant fields to sign up and create an account                                          | Pass      |
+| Sign Up button            | Display/Click    | Displays the sign up button and informs user of any empty fields                      | Pass      |
+| Create account   | Display/Click    | Successfully creates a user account and displays an appropriate message                | Pass      |
+
+#### Login
+
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Login              | Display    | Shows all relevant fields to sign into an existing account                                         | Pass      |
+| Login button            | Display/Click    | Displays the login button and informs user of any empty fields                      | Pass      |
+| User account   | Display/Click    | Successfully logs in and displays an appropriate message                | Pass      |
+
+#### Logout
+
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Logout              | Display    | Shows a relevant message asking if the user wants to log out                                         | Pass      |
+| Logout button            | Display/Click    | Displays the logout button and successfully logs the user out of their account w/ a message                      | Pass      |
+
+
+
+The above tables were created using [AliOKeeffe's](https://github.com/AliOKeeffe/PP4_My_Meal_Planner/blob/main/TESTING.md) readme as an example
 
 
 [Back to top](#table-of-contents)
@@ -228,7 +325,9 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 
 ### Fixed Bugs
 
-An error with data type being an integear unable to be converted to a datetimefield
+There were of course a number of bugs big and small that I came across while contstructing my site. These can be seen in the list below:
+
+An error with data type being an integar unable to be converted to a datetimefield
 
 Trying to write a custom class based view so that both the Release data as well as the Article data would be displayed correctly on the homepage was a big challenge for me when building this site. 
 
