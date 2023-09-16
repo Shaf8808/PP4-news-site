@@ -20,19 +20,14 @@ Click [here](./README.md) to be redirected back to the original Readme document
   * [Deleting reviews](#deleting-reviews)
   * [Editing releases](#editing-releases)
   * [Deleting releases](#deleting-releases)
-  * [User interactivity](#deleting-releases)
-  * [Deleting releases](#deleting-releases)
-  * [Deleting releases](#deleting-releases)
-  * [Deleting releases](#deleting-releases)
-  * [Deleting releases](#deleting-releases)
+  * [User interactivity](#user-interactivity)
+  * [User authentication](#user-authentication)
+  * [Register](#register)
+  * [Login](#login)
+  * [Logout](#logout)
 - [Bugs](#bugs)
   * [Fixed Bugs](#fixed-bugs)
-    + 
-    + 
-    + 
-    + 
-    + 
-  * [Unfixed bugs:](#unfixed-bugs-)
+  * [Unfixed bugs](#unfixed-bugs-)
 
 
 ## User story testing
@@ -90,7 +85,7 @@ In terms of the content of my website, it is split into three main categories. A
 
 ### HTML
 
-Every html page was validated using [W3C HTML Validator](https://validator.w3.org/)
+Every html page was validated using [W3C HTML Validator](https://validator.w3.org/) with no errors
 
 ### Css
 
@@ -327,15 +322,15 @@ The above tables were created using [AliOKeeffe's](https://github.com/AliOKeeffe
 
 There were of course a number of bugs big and small that I came across while contstructing my site. These can be seen in the list below:
 
-An error with data type being an integar unable to be converted to a datetimefield
+* An error with data type being an integar unable to be converted to a datetimefield. This occured while I was trying to modify my data model field for release date. I later found out that there can be some issues that occur when trying to change a data field after data has already been entered, which meant that I first had to empty the database before making any necesssary changes to my data model.
 
-Trying to write a custom class based view so that both the Release data as well as the Article data would be displayed correctly on the homepage was a big challenge for me when building this site. 
+* Trying to write a custom class based view so that both the Release data as well as the Article data would be displayed correctly on the homepage was a big challenge for me when building this site. 
 
-Adding crud functionality to my site was undoubtedly one of the most challenging aspects of building my project. As the  codestar blog tutorial only covered an administrator being able to edit user comments as well as delete them, I had to find a way to allow a specific registered user to be able to both edit as well as delete their own comment without altering anybody else's. 
+* Adding crud functionality to my site was undoubtedly one of the most challenging aspects of building my project. As the  codestar blog tutorial only covered an administrator being able to edit user comments as well as delete them, I had to find a way to allow a specific registered user to be able to both edit as well as delete their own comment without altering anybody else's. 
 
-Including null=True to my review and article fields in my Comment data model ensured that the fields could be null meaning I don't have to provide data for those fields when posting comments on either the articles page or reviews page.
+* Including null=True to my review and article fields in my Comment data model ensured that the fields could be null meaning I don't have to provide data for those fields when posting comments on either the articles page or reviews page.
 
-I was having some issues with posting an image through my form I created in Django, as everything else was being posted successfully. I managed to, however, with some help from tutor support identify the problem which was the enctype="multipart/form-data" attribute. This is set to text by default, which I needed to change in order to successfully post an image.
+* I was having some issues with posting an image through my form I created in Django, as everything else was being posted successfully. I managed to, however, with some help from tutor support identify the problem which was the enctype="multipart/form-data" attribute. This is set to text by default, which I needed to change in order to successfully post an image.
 
 ## Unfixed Bugs
 

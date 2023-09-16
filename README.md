@@ -6,9 +6,9 @@ I have also included a releases section/tab on the right hand side of the homepa
 
 Furthermore, my site also contains a seperate page dedicated purely to game reviews of the latest releases. The reason as to why I chose to include a different page strictly for reviews is to make it easier for users to view them if they want to get a good idea of the overall quality of a game in order to make an informed decision wheyther or not to make a purchase. This saves the user both time and effort sifting through article after article trying to find the review of a particular game they are interested in.
 
-Live link - [GamesGuide](https://gamesguide.herokuapp.com/)
+<img src="./docs/readme_images/i-am-responsive-image.jpg">
 
-I AM RESPONSIVE LINK!!!!!!!!
+### [Live link](https://pp4-news-site-3458881b171b.herokuapp.com/)
 
 ## Table of Contents
 
@@ -522,6 +522,9 @@ Review header text animation
 https://www.sliderrevolution.com/resources/css-text-animation/ 
 (CSS TEXT REVEALING ANIMATION)
 
+Articles:
+Texas Chainsaw article:
+https://www.ign.com/articles/texas-chainsaw-massacre-online-game-gun
 Mortal Kombat article:
 https://www.ign.com/articles/mortal-kombat-1-pre-order-beta-johnny-cage-ps5-xbox
 
@@ -536,9 +539,6 @@ https://images.app.goo.gl/6BiRYQNq6CMCq7jm7
 Modern Warfare 3:
 https://images.app.goo.gl/G5MjrxXBBxkVG1xw5
 
-Articles:
-Texas Chainsaw article:
-https://www.ign.com/articles/texas-chainsaw-massacre-online-game-gun
 
 Stack Overflow
 

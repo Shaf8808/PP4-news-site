@@ -14,7 +14,8 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% load static %}
-                                <img class="img-fluid rounded-img" src="{% static './images/homepage-gaming-image.jpg' %}">
+                                <img class="img-fluid rounded-img" src="{% static './images/homepage-gaming-image.jpg' %}"
+                                alt="Homepage image">
                             </div>
                         </div>
                     </div>
@@ -39,7 +40,7 @@
                                         <span class="badge rounded-pill bg-warning text-dark">{{ release.platform }}</span>
                                 {% endif %}
                                 </li>
-                                <hr>
+                        <hr>
                                 <!-- Only allows an admin to edit and delete releases -->
                                 {% if user.is_superuser %}
                                 <a class="btn btn-secondary btn-sm mt-1 mb-1"
@@ -65,9 +66,10 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in article.featured_image.url %}
-                                <img class="img-fluid rounded-img" src="">
+                                <img class="img-fluid rounded-img" src="" alt="Game image">
                                 {% else %}
-                                <img class="img-fluid rounded-img" src=" {{ article.featured_image.url }}">
+                                <img class="img-fluid rounded-img" src=" {{ article.featured_image.url }}"
+                                alt="Game image">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ article.author }}</p>
