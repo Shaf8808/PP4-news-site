@@ -11,12 +11,8 @@
                 <p class="article-subtitle">{{ article.author }} | {{ article.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- A chosen  default featured image -->
-                {% if "placeholder" in article.featured_image.url %}
-                <img src="" width="100%">
-                {% else %}
-                <img src=" {{ article.featured_image.url }}" width="100%">
-                {% endif %}
+                <img src=" {{ article.featured_image.url }}" style="width:100%"
+                alt="Game article image">
             </div>
         </div>
     </div>
