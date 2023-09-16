@@ -87,8 +87,6 @@
                         </span> wrote:
                     </p>
                     {{ comment.body | linebreaks }}
-                    
-                    
                 </div>
                 <!-- Can edit or delete a comment if it's a registered user -->
                 {% if user.is_authenticated and comment.name == user.username %}

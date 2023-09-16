@@ -87,6 +87,8 @@ In terms of the content of my website, it is split into three main categories. A
 
 Every html page was validated using [W3C HTML Validator](https://validator.w3.org/) with no errors
 
+Sidenote: There was one error which I was not sure how to resolve in my article/review details page:  No p element in scope but a p end tag seen.
+
 ### Css
 
 No errors were found when passing my CSS file through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)

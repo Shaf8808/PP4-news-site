@@ -10,14 +10,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="review-card mb-12">
-                        <section class="review-header">
+                        <div class="review-header">
                             <div class="title-wrapper">
-                                <h1 class="sweet-title">
+                                <div class="sweet-title">
                                     <span class="header-one" data-text="GamesGuide">GamesGuide</span>
                                     <div class="header-two">
-                                    <span class="header-two-text" data-text="Reviews">Reviews</span>
+                                        <span class="header-two-text" data-text="Reviews">Reviews</span>
                                     </div>
-                                </h1>
+                                </div>
                                 <span class="top-title">Welcome to</span>
                                 <span class="bottom-title">The hottest reviews of the latest titles, all in one place
                                 </span>
@@ -26,8 +26,7 @@
                 </div>
             </div>
         </div>
-
-        </section>
+    </div>
         <!-- Review list column -->
         <div class="col-12 left">
             <div class="row">
@@ -36,11 +35,8 @@
                     <div class="card mb-6">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in review.image.url %}
-                                <img class="img-fluid rounded-img" src="">
-                                {% else %}
-                                <img class="img-fluid rounded-img" src=" {{ review.image.url }}">
-                                {% endif %}
+                                <img class="img-fluid rounded-img" src=" {{ review.image.url }}"
+                                    alt="Review game image">
                             </div>
                             <a href="{% url 'review_detail' review.slug %}" class="">
                                 <h2 class="card-title">{{ review.title }}</h2>
