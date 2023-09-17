@@ -38,9 +38,11 @@
                                 {% if "placeholder" in review.image.url %}
                                 {% load static %}
                                 <img class="img-fluid rounded-img"
-                                    src="{% static './images/default-review-image.jpg' %}">
+                                    src="{% static './images/default-review-image.jpg' %}"
+                                    alt="Game Review image">
                                 {% else %}
-                                <img class="img-fluid rounded-img" src=" {{ review.image.url }}">
+                                <img class="img-fluid rounded-img" src=" {{ review.image.url }}"
+                                alt="Game Review image">
                                 {% endif %}
                             </div>
                             <a href="{% url 'review_detail' review.slug %}" class="">
