@@ -66,7 +66,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in article.featured_image.url %}
-                                <img class="img-fluid rounded-img" src="" alt="Game image">
+                                <img class="img-fluid rounded-img"
+                                    src="{% static './images/default-article-image.jpg' %}"
+                                    alt="Game image">
                                 {% else %}
                                 <img class="img-fluid rounded-img" src=" {{ article.featured_image.url }}"
                                     alt="Game image">

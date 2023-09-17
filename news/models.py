@@ -33,7 +33,6 @@ class Article(models.Model):
         return self.likes.count()
 
 
-
 class Release(models.Model):
     # Data model for upcoming releases section
     name = models.CharField(max_length=100)

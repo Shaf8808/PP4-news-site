@@ -35,8 +35,12 @@
                     <div class="card mb-6">
                         <div class="card-body">
                             <div class="image-container">
-                                <img class="img-fluid rounded-img" src=" {{ review.image.url }}"
-                                    alt="Review game image">
+                                {% if "placeholder" in review.image.url %}
+                                <img class="img-fluid rounded-img"
+                                    src="">
+                                {% else %}
+                                <img class="img-fluid rounded-img" src=" {{ review.image.url }}">
+                                {% endif %}
                             </div>
                             <a href="{% url 'review_detail' review.slug %}" class="">
                                 <h2 class="card-title">{{ review.title }}</h2>
