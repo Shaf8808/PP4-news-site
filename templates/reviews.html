@@ -36,8 +36,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in review.image.url %}
+                                {% load static %}
                                 <img class="img-fluid rounded-img"
-                                    src="">
+                                    src="{% static './images/default-review-image.jpg' %}">
                                 {% else %}
                                 <img class="img-fluid rounded-img" src=" {{ review.image.url }}">
                                 {% endif %}
