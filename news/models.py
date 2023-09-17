@@ -66,7 +66,7 @@ class Review(models.Model):
 
     def __str__(self):
         return self.title
-    
+  
     def number_of_likes(self):
         return self.likes.count()
 
@@ -75,8 +75,10 @@ class Comment(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE,
                                 related_name="comments", null=True, blank=True)
     review = models.ForeignKey(Review, on_delete=models.CASCADE,
-                                related_name="review_comments", null=True, blank=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, related_name="user_comment")
+                               related_name="review_comments",
+                               null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True,
+                             blank=True, related_name="user_comment")
     name = models.CharField(max_length=80)
     email = models.EmailField(null=True, blank=True)
     body = models.TextField()

@@ -11,8 +11,16 @@
                 <p class="review-subtitle">{{ review.reviewer }} | {{ review.review_date }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src=" {{ review.image.url }}" style="width:100%;"
-                alt="Review game image">
+                <!-- Displays static image as placeholder if no 
+                image uploaded -->
+                {% if "placeholder" in review.image.url %}
+                {% load static %}
+                <img src="{% static './images/default-review-image.jpg' %}" 
+                     alt="Game image" style="width:100%">
+                {% else %}
+                <img src=" {{ review.image.url }}" 
+                     alt="Game image" style="width:100%">
+                {% endif %}
             </div>
         </div>
     </div>

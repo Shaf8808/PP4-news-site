@@ -11,8 +11,16 @@
                 <p class="article-subtitle">{{ article.author }} | {{ article.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src=" {{ article.featured_image.url }}" style="width:100%"
-                alt="Game article image">
+                <!-- Displays static image as placeholder if no 
+                image uploaded -->
+                {% if "placeholder" in article.featured_image.url %}
+                {% load static %}
+                <img src="{% static './images/homepage-gaming-image.jpg' %}"
+                     alt="Game image" style="width:100%">
+                {% else %}
+                <img src=" {{ article.featured_image.url }}" 
+                     alt="Game image" style="width:100%">
+                {% endif %}
             </div>
         </div>
     </div>

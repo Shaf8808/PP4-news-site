@@ -147,7 +147,7 @@ class ArticleDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Article.objects.filter(status=1)
         article = get_object_or_404(queryset, slug=slug)
-        comments = article.comments.filter(approved=True).order_by('created_on')
+        comments = article.comments.filter(approved=True).order_by('created_on')  # noqa
         liked = False
         if article.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -168,7 +168,7 @@ class ArticleDetail(View):
     def post(self, request, slug, *args, **kwargs):
         queryset = Article.objects.filter(status=1)
         article = get_object_or_404(queryset, slug=slug)
-        comments = article.comments.filter(approved=True).order_by('created_on')
+        comments = article.comments.filter(approved=True).order_by('created_on')  # noqa
         liked = False
         if article.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -225,12 +225,14 @@ class UpdateComment(
         return HttpResponseRedirect(self.get_success_url())
 
     def get_success_url(self):
-        return reverse('article_detail', kwargs={'slug': self.object.article.slug})
+        return reverse('article_detail', 
+                       kwargs={'slug': self.object.article.slug})
 
     def get_object(self, queryset=None):
         comment_id = self.kwargs['id']
         queryset = queryset or self.get_queryset()
-        comment = get_object_or_404(queryset, id=comment_id, user=self.request.user)
+        comment = get_object_or_404(queryset, id=comment_id, 
+                                    user=self.request.user)
         return comment
 
     def test_func(self):
@@ -241,14 +243,16 @@ class UpdateComment(
         return False
 
 
-class DeleteComment(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+class DeleteComment(LoginRequiredMixin, 
+                    UserPassesTestMixin, generic.DeleteView):  
     model = Comment
     template_name = 'delete_comment.html'
 
     def get_object(self, queryset=None):
         comment_id = self.kwargs['id']
         queryset = queryset or self.get_queryset()
-        comment = get_object_or_404(queryset, id=comment_id, user=self.request.user)
+        comment = get_object_or_404(queryset, id=comment_id, 
+                                    user=self.request.user)
         return comment
 
     def test_func(self):
@@ -263,7 +267,8 @@ class DeleteComment(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView)
         return HttpResponseRedirect(self.get_success_url())
 
     def get_success_url(self):
-        return reverse('article_detail', kwargs={'slug': self.object.article.slug})
+        return reverse('article_detail', 
+                       kwargs={'slug': self.object.article.slug})
 
 
 class ArticleLike(View):
@@ -280,15 +285,14 @@ class ArticleLike(View):
             article.likes.add(request.user)
         
         return HttpResponseRedirect(reverse('article_detail', args=[slug]))
-    
-
+   
 
 class ReviewDetail(View):
     # View for displaying the content of the selected review
     def get(self, request, slug, *args, **kwargs):
         queryset = Review.objects.filter(status=1)
         review = get_object_or_404(queryset, slug=slug)
-        comments = review.review_comments.filter(approved=True).order_by('created_on')
+        comments = review.review_comments.filter(approved=True).order_by('created_on')  # noqa
         liked = False
         if review.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -309,7 +313,7 @@ class ReviewDetail(View):
     def post(self, request, slug, *args, **kwargs):
         queryset = Review.objects.filter(status=1)
         review = get_object_or_404(queryset, slug=slug)
-        comments = review.review_comments.filter(approved=True).order_by('created_on')
+        comments = review.review_comments.filter(approved=True).order_by('created_on')  # noqa
         liked = False
         if review.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -343,8 +347,6 @@ class ReviewDetail(View):
         )
 
 
-
-
 class UpdateReviewComment(
         LoginRequiredMixin, UserPassesTestMixin, 
         generic.UpdateView
@@ -368,12 +370,14 @@ class UpdateReviewComment(
         return HttpResponseRedirect(self.get_success_url())
 
     def get_success_url(self):
-        return reverse('review_detail', kwargs={'slug': self.object.review.slug})
+        return reverse('review_detail', 
+                       kwargs={'slug': self.object.review.slug})
 
     def get_object(self, queryset=None):
         comment_id = self.kwargs['id']
         queryset = queryset or self.get_queryset()
-        comment = get_object_or_404(queryset, id=comment_id, user=self.request.user)
+        comment = get_object_or_404(queryset, 
+                                    id=comment_id, user=self.request.user)
         return comment
 
     def test_func(self):
@@ -384,14 +388,16 @@ class UpdateReviewComment(
         return False
 
 
-class DeleteReviewComment(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+class DeleteReviewComment(LoginRequiredMixin, 
+                          UserPassesTestMixin, generic.DeleteView):
     model = Comment
     template_name = 'delete_review_comment.html'
 
     def get_object(self, queryset=None):
         comment_id = self.kwargs['id']
         queryset = queryset or self.get_queryset()
-        comment = get_object_or_404(queryset, id=comment_id, user=self.request.user)
+        comment = get_object_or_404(queryset, id=comment_id, 
+                                    user=self.request.user)
         return comment
 
     def test_func(self):
@@ -406,7 +412,8 @@ class DeleteReviewComment(LoginRequiredMixin, UserPassesTestMixin, generic.Delet
         return HttpResponseRedirect(self.get_success_url())
 
     def get_success_url(self):
-        return reverse('review_detail', kwargs={'slug': self.object.review.slug})
+        return reverse('review_detail', 
+                       kwargs={'slug': self.object.review.slug})  
 
         
 class ReviewLike(View):
