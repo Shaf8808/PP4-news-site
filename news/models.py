@@ -38,7 +38,7 @@ class Release(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=250, unique=True)
     release_date = models.DateTimeField()
-    platform = models.CharField(max_length=20)
+    platform = models.CharField(max_length=80)
 
     class Meta:
         ordering = ["-release_date"]
