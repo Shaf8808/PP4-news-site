@@ -97,7 +97,7 @@ No errors were found when passing my javascript through [Jshint](https://jshint.
 
 ### Python
 
-No errors were found when passing my Python files through [Pep8](https://pep8ci.herokuapp.com/)
+No errors were found when passing my Python files through except some whitespace [Pep8](https://pep8ci.herokuapp.com/)
 
 [Back to top](#table-of-contents)
 
