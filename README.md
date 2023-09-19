@@ -10,8 +10,6 @@ Furthermore, my site also contains a seperate page dedicated purely to game revi
 
 ### [Live link](https://pp4-news-site-3458881b171b.herokuapp.com/)
 
-<a href="https://pp4-news-site-3458881b171b.herokuapp.com/" target="_blank">### Live link</a>
-
 ## Table of Contents
 
 - [GamesGuide](#gamesguide)
