@@ -8,7 +8,7 @@ Furthermore, my site also contains a seperate page dedicated purely to game revi
 
 <img src="./docs/readme_images/i-am-responsive-image.jpg">
 
-### [Live link](https://pp4-news-site-3458881b171b.herokuapp.com/){:target="_blank"}
+### ![Live link](https://pp4-news-site-3458881b171b.herokuapp.com/)
 
 ## Table of Contents
 
