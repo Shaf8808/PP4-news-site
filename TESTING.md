@@ -213,6 +213,7 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Button                | Display    | Shows the button only for the administrator at the bottom of each article/review                                          | Pass      |
 | NavBar                | Display    | Shows navbar on form page                                          | Pass      |
 | Fields            | Display    | Displays all fields filled with the correct data                       | Pass      |
 | Submit button    | Click/Display    | Updates correct article with new data and displays it on homepage                 | Pass      |
@@ -224,6 +225,7 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Button                | Display    | Shows the button only for the administrator at the bottom of each article/review                                          | Pass      |
 | NavBar                | Display    | Shows navbar on page                                          | Pass      |
 | Message            | Display    | Displays an appropriate delete message                       | Pass      |
 | Delete button    | Click/Display    | Deletes correct article and removes it from the homepage                 | Pass      |
@@ -234,6 +236,7 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Button                | Display    | Shows the button only for the administrator at the bottom of each article/review                                          | Pass      |
 | NavBar                | Display    | Shows navbar on form page                                          | Pass      |
 | Fields            | Display    | Displays all fields filled with the correct data                       | Pass      |
 | Submit button    | Click/Display    | Updates correct review with new data and displays it on homepage                 | Pass      |
@@ -245,6 +248,7 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Button                | Display    | Shows the button only for the administrator at the bottom of each article/review                                          | Pass      |
 | NavBar                | Display    | Shows navbar on page                                          | Pass      |
 | Message            | Display    | Displays an appropriate delete message                       | Pass      |
 | Delete button    | Click/Display    | Deletes correct review and removes it from the review page                 | Pass      |
@@ -257,6 +261,7 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Button                | Display    | Shows the button only for the administrator at the bottom of each article/review                                          | Pass      |
 | NavBar                | Display    | Shows navbar on form page                                          | Pass      |
 | Fields            | Display    | Displays all fields filled with the correct data                       | Pass      |
 | Submit button    | Click/Display    | Updates correct release with new data and displays it on homepage                 | Pass      |
@@ -268,6 +273,7 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Button                | Display    | Shows the button only for the administrator at the bottom of each article/review                                          | Pass      |
 | NavBar                | Display    | Shows navbar on page                                          | Pass      |
 | Message            | Display    | Displays an appropriate delete message                       | Pass      |
 | Delete button    | Click/Display    | Deletes correct release data and removes it from the homepage                 | Pass      |
@@ -278,11 +284,23 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
-| Like and comment icon              | Display    | Shows number of likes and comments for each article/review                                          | Pass      |
+| Article/Review detail            | Display/Click    | Lets the user open an article/review after selecting it                       | Pass      |
+| Like and comment icon              | Display    | Shows number of likes and comments for each article/review on the appropriate 'card'                                          | Pass      |
 | Like            | Display/Click    | Lets the user 'like' an article/review                       | Pass      |
+| Comments section            | Display    | Displays the Comments section for both users and non-users at the bottom of each article/review detail page                       | Pass      |
 | Comment form    | Display    | Displays the comment form on an article/review only for authenticated users                 | Pass      |
 | Comment submit    | Click/Display    | Allows the user to comment on an article/review                 | Pass      |
 | Comment approval message    | Display    | Informs user their comment is awaiting approval once posted                 | Pass      |
+| Edit comment button           | Display    | Only displays edit comment button for each comment posted by the logged in user                       | Pass      |
+| Edit comment form          | Display    | Redirects user to an 'Edit Comment' form with the correct comment in the field once clicked                       | Pass      |
+| Update button          | Display/Click    | Displays an Update button when, once clicked, edits the appropriate comment before diaplaying it on the relevant page                       | Pass      |
+| Cancel button           | Display/Click    | Displays a Cancel button that redirects the user back to the relevant page once clicked                       | Pass      |
+| Delete comment button           | Display    | Only displays delete comment button for each comment posted by the logged in user                       | Pass      |
+| Delete comment          | Display    | Redirects user to a 'Delete Comment' page with a delete message                      | Pass      |
+| Delete button          | Display/Click    | Displays a Delete button that deletes the correct comment                     | Pass      |
+| Cancel button          | Display/Click    | Redirects user back to the previous page                      | Pass      |
+
+
 
 ### User authentication
 
@@ -290,17 +308,17 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
-| Register              | Display    | Shows all relevant fields to sign up and create an account                                          | Pass      |
+| Register fields              | Display    | Shows all relevant fields to sign up and create an account                                          | Pass      |
 | Sign Up button            | Display/Click    | Displays the sign up button and informs user of any empty fields                      | Pass      |
-| Create account   | Display/Click    | Successfully creates a user account and displays an appropriate message                | Pass      |
+| Sign Up   | Display/Click    | Successfully creates a user account and displays an appropriate message that says successfully signed in as the user                | Pass      |
 
 #### Login
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
-| Login              | Display    | Shows all relevant fields to sign into an existing account                                         | Pass      |
-| Login button            | Display/Click    | Displays the login button and informs user of any empty fields                      | Pass      |
-| User account   | Display/Click    | Successfully logs in and displays an appropriate message                | Pass      |
+| Login              | Display    | Shows all relevant fields to sign into an existing account (Username and Password)                                         | Pass      |
+| Sign In button            | Display/Click    | Displays the login button and informs user of any empty fields if any                      | Pass      |
+| Sign In   | Click    | Successfully logs in and displays an appropriate message                | Pass      |
 
 #### Logout
 
