@@ -523,12 +523,49 @@ https://www.sliderrevolution.com/resources/css-text-animation/
 (CSS TEXT REVEALING ANIMATION)
 
 Articles:
-Texas Chainsaw article:
-https://www.ign.com/articles/texas-chainsaw-massacre-online-game-gun
+
+Metal Gear article:
+https://www.ign.com/articles/metal-gear-solid-master-collection-vol-1-preview-first-impressions
+
+Assassins Creed Mirage:
+https://www.ign.com/articles/assassins-creed-mirage-release-date-gameplay-story-trailers-latest-news
+
+Call of Duty MW3:
+https://www.ign.com/articles/call-of-duty-modern-warfare-iii-reverses-course-on-mwii
+
 Mortal Kombat article:
 https://www.ign.com/articles/mortal-kombat-1-pre-order-beta-johnny-cage-ps5-xbox
 
+Reviews:
+
+Baldur's Gate 3:
+https://www.ign.com/articles/baldurs-gate-3-review
+
+Texas Chainsaw Massacre:
+https://www.ign.com/articles/the-texas-chain-saw-massacre-review
+
+Shadow Gambit: The Cursed Crew:
+https://www.ign.com/articles/shadow-gambit-the-cursed-crew-review
+
+Blasphemous 2:
+https://www.ign.com/articles/blasphemous-2-review
+
 Images:
+
+Homepage image:
+https://images.app.goo.gl/PLRHFzjFUYj3718H9
+
+Modern Warfare 3:
+https://images.app.goo.gl/G5MjrxXBBxkVG1xw5
+
+Metal Gear Solid:
+https://images.app.goo.gl/NbxNfM9vnuZmoHaBA
+
+Assassins Creed Mirage:
+https://images.app.goo.gl/CDurnHuWeoMJXtaW9
+
+Mortal Kombat:
+https://images.app.goo.gl/DK3G7bYTgf54nkyY8
 
 Texas Chainsaw Massacre:
 https://images.app.goo.gl/vrbBbdUFDb5qFqJU6
@@ -536,15 +573,18 @@ https://images.app.goo.gl/vrbBbdUFDb5qFqJU6
 Shadow Gambit the Cursed Crew:
 https://images.app.goo.gl/6BiRYQNq6CMCq7jm7
 
-Modern Warfare 3:
-https://images.app.goo.gl/G5MjrxXBBxkVG1xw5
+Baldur's Gate:
+https://images.app.goo.gl/FdrURmXKXsmdiXHC8
 
 
 Stack Overflow
 
 As an example and for inspiration:
+
 [IGN](https://www.ign.com/uk)
+
 [Gamespot](https://www.gamespot.com/)
+
 AliOKeeffe - PP4_My_Meal_Planner
 
 
