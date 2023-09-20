@@ -2,6 +2,12 @@ Click [here](./README.md) to be redirected back to the original Readme document
 
 # Table of Contents
 - [User Story Testing](#user-story-testing)
+  * [Account Registration](#user-story-account-registration)
+  * [Approve Comments](#user-story-approve-comments)
+  * [Like/Unlike](#user-story-likeunlike)
+  * [Managing Articles](#user-story-managing-articles)
+  * [Open an Article](#user-story-open-an-article)
+  * [Comment on a Story](#user-story-comment-on-a-story)
 - [Validator Testing](#validator-testing)
   * [HTML](#html)
   * [CSS](#css)

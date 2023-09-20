@@ -594,6 +594,3 @@ Many thanks to my tutor Rebecca and my mentor Antonio for their help and answeri
 
 
 [Back to top](#table-of-contents)
-
-
-REMEMBER TO PROVIDE ADMIN CREDENTIALS BEFORE SUBMITTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
