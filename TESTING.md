@@ -31,18 +31,18 @@ Click [here](./README.md) to be redirected back to the original Readme document
 
 
 ## User story testing
-Below are the most crucial features of my site that had to be implemented in order for it to meet the essential project criteria laid out in the guidelines. For the full exhaustive list of user stories, please refer to my project board [here](https://github.com/users/Shaf8808/projects/4). Additionally, every single individual feature that I created for my site has been thoroughly tested which can be seen in the [Manual Testing](#manual-testing) section below.
+Below are the most crucial features of my site that had to be implemented for it to meet the essential project criteria laid out in the guidelines. For the full exhaustive list of user stories, please refer to my project board [here](https://github.com/users/Shaf8808/projects/4). Additionally, every single individual feature that I created for my site has been thoroughly tested which can be seen in the [Manual Testing](#manual-testing) section below.
 
 
-#### User story: Account registration
+#### User story: Account Registration
 
-*As a site user I can register to the gaming news site so that I can login and comment on stories and reviews as well as like them*
+*As a site user I can register to the gaming news site so that I can log in and comment on stories and reviews as well as like them*
 
 <img src="./docs/readme_images/navbar-no-user.jpg">
 
 The option to register and login is always visible to the user as it is viewable on the navigation bar displayed at the top of every page
 
-If they click the register link at the top, the sign up page taken from the django framework is displayed which can be seen below: 
+If they click the register link at the top, the sign-up page taken from the Django framework is displayed which can be seen below: 
 
 <img src="./docs/readme_images/register-page.jpg">
 
@@ -54,7 +54,7 @@ Once they have successfully registered and logged in to their account, a success
 
 *As a site admin I can approve or disapprove comments so that I can control and filter out any inappropriate comments made by other users on the site*
 
-When it comes to comes to leaving comments, I have decided to implement the same feature used in the Codestar blog tutorial of comment approval. The reason as to why I have done this is so that I as the administrator have a greater cotrol over the types of comments that are posted on the site in case some are inappropriate or offensive.
+When it comes to leaving comments, I have decided to implement the same feature used in the Codestar blog tutorial of comment approval. The reason as to why I have done this is so that I as the administrator have greater control over the types of comments that are posted on the site in case some are inappropriate or offensive.
 
 As the gif shows below, this works as intended:
 
@@ -65,7 +65,7 @@ As the gif shows below, this works as intended:
 
 *As a site user I can like or unlike a story so that I can easily convey whether I like the article or not with the click of a button*
 
-I have also added the feature of liking and unlike articles and reviews, which can be done at the mere click of a button in the shape of a thumbs up icon. Once a user has clicked the button, the number next to it goes up by one. If clicked again the number goes down by one and reverts back to the original amount. This is shown in the clip below:
+I have also added the feature of liking and unlike articles and reviews, which can be done at the mere click of a button in the shape of a thumbs-up icon. Once a user has clicked the button, the number next to it goes up by one. If clicked again the number goes down by one and reverts to the original amount. This is shown in the clip below:
 
 <img src="./docs/readme_clips/liking.gif">
 
@@ -79,7 +79,7 @@ Depending on the number of likes that an article or a review has, the amount is 
 
 In terms of the content of my website, it is split into three main categories. Articles, Reviews and Releases. It was of course important that I was able to add this content successfully without throwing any errors, as well as cover the rest of crud functionality successfully. 
 
-The image below shows that all three categories of content displayed throughout my site are all changeable at the click of a button. I can easily edit as well as delete each item quickly without needing to access the admin panel. These have all been tested and work as intended. I can also create new content such as articles at the top of the page on the navbar seen in the image below. This is only visible to me as the administrator, and also all function correctly.
+The image below shows that all three categories of content displayed throughout my site are changeable at the click of a button. I can easily edit as well as delete each item quickly without needing to access the admin panel. These have all been tested and work as intended. I can also create new content such as articles at the top of the page on the navbar seen in the image below. This is only visible to me as the administrator, and also all function correctly.
 
 <img src="docs/readme_images/homepage-admin.jpg">
 
@@ -88,7 +88,7 @@ The image below shows that all three categories of content displayed throughout 
 
 *As a site user I can click on a story so that it opens for me to read*
 
-This particular user story is fairly self-explanatory, where each article or review could be opened for the user to read and view at their leisure. This has been tested with every piece of content on the page, and has successfully passed the test. The image below shows my article detail page.  
+This particular user story is fairly self-explanatory, where each article or review could be opened for the user to read and view at their leisure. This has been tested with every piece of content on the page and has successfully passed the test. The image below shows my article detail page.  
 
 <img src="docs/readme_images/article-detail-page.jpg">
 
@@ -105,7 +105,7 @@ This was also a very important feature of my site where users could leave commen
 
 ### HTML
 
-Every html page was validated using [W3C HTML Validator](https://validator.w3.org/) with no errors.
+Every HTML page was validated using [W3C HTML Validator](https://validator.w3.org/) with no errors.
 
 ### Css
 
@@ -117,7 +117,7 @@ No errors were found when passing my javascript through [Jshint](https://jshint.
 
 ### Python
 
-No errors were found when passing my Python files through except some whitespace [Pep8](https://pep8ci.herokuapp.com/)
+No errors were found when passing my Python files through [Pep8](https://pep8ci.herokuapp.com/) except for some whitespace 
 
 [Back to top](#table-of-contents)
 
@@ -127,7 +127,7 @@ The website was tested on different browsers such as Google Chrome, Safari and F
 
 ## Device Testing
 
-My site was meticulously tested and viewed multiple times on desktop, laptop and mobile phones in order to see if the structure and layout of the site remained uncompromised. It holds up well regardless of the device it is being viewed on. I also utilised Chrome developer tools to check this, with positive results.
+My site was meticulously tested and viewed multiple times on desktop, laptop and mobile phones to see if the structure and layout of the site remained uncompromised. It holds up well regardless of the device it is being viewed on. I also utilised Chrome developer tools to check this, with positive results.
 
 ## Manual Testing
 
@@ -190,8 +190,8 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 | Content field         | Display      | Displays content field                                          | Pass      |
 | Excerpt field            | Display      | Displays excerpt field                                            | Pass      |
 | Status field    | Display    | Displays status field with the relevant options                  | Pass      |
-| Submit button    | Click    | Creates new article 'card' and displays it on homescreen                 | Pass      |
-| Submit button    | Click    | Informs user of any empty fields if there are any before submitting                | Pass      |
+| Submit button    | Click    | Creates new article 'card' and displays it on home screen                 | Pass      |
+| Submit button    | Click    | Informs the user of any empty fields if there are any before submitting                | Pass      |
 | Cancel button    | Click    | Redirects to homepage                 | Pass      |
 
 
@@ -209,7 +209,7 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 | Excerpt field            | Display      | Displays excerpt field                                            | Pass      |
 | Status field    | Display    | Displays status field with the relevant options                  | Pass      |
 | Submit button    | Click    | Creates new review 'card' and displays it on review page                 | Pass      |
-| Submit button    | Click    | Informs user of any empty fields if there are any before submitting                | Pass      |
+| Submit button    | Click    | Informs the user of any empty fields if there are any before submitting                | Pass      |
 | Cancel button    | Click    | Redirects to review page                 | Pass      |
 
 
@@ -225,8 +225,8 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 | Release date field            | Display      | Displays field                                              | Pass      |
 | Platform field            | Display      | Displays field                                              | Pass      |
 | Badges             | Display      | Adds appropriately styled badge depending on the release platform                                              | Pass      |
-| Submit button    | Click    | Creates new release item and displays it on homepage releases section                 | Pass      |
-| Submit button    | Click    | Informs user of any empty fields if there are any before submitting                | Pass      |
+| Submit button    | Click    | Creates new release item and displays it on the homepage releases section                 | Pass      |
+| Submit button    | Click    | Informs the user of any empty fields if there are any before submitting                | Pass      |
 | Cancel button    | Click    | Redirects to homepage                 | Pass      |
 
 ### Editing articles
@@ -305,17 +305,17 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
 | Article/Review detail            | Display/Click    | Lets the user open an article/review after selecting it                       | Pass      |
-| Like and comment icon              | Display    | Shows number of likes and comments for each article/review on the appropriate 'card'                                          | Pass      |
+| Like and comment icon              | Display    | Shows the number of likes and comments for each article/review on the appropriate 'card'                                          | Pass      |
 | Like            | Display/Click    | Lets the user 'like' an article/review                       | Pass      |
 | Comments section            | Display    | Displays the Comments section for both users and non-users at the bottom of each article/review detail page                       | Pass      |
 | Comment form    | Display    | Displays the comment form on an article/review only for authenticated users                 | Pass      |
 | Comment submit    | Click/Display    | Allows the user to comment on an article/review                 | Pass      |
 | Comment approval message    | Display    | Informs user their comment is awaiting approval once posted                 | Pass      |
-| Edit comment button           | Display    | Only displays edit comment button for each comment posted by the logged in user                       | Pass      |
+| Edit comment button           | Display    | Only displays edit comment button for each comment posted by the logged-in user                       | Pass      |
 | Edit comment form          | Display    | Redirects user to an 'Edit Comment' form with the correct comment in the field once clicked                       | Pass      |
-| Update button          | Display/Click    | Displays an Update button when, once clicked, edits the appropriate comment before diaplaying it on the relevant page                       | Pass      |
+| Update button          | Display/Click    | Displays an Update button when once clicked, edits the appropriate comment before displaying it on the relevant page                       | Pass      |
 | Cancel button           | Display/Click    | Displays a Cancel button that redirects the user back to the relevant page once clicked                       | Pass      |
-| Delete comment button           | Display    | Only displays delete comment button for each comment posted by the logged in user                       | Pass      |
+| Delete comment button           | Display    | Only displays delete comment button for each comment posted by the logged-in user                       | Pass      |
 | Delete comment          | Display    | Redirects user to a 'Delete Comment' page with a delete message                      | Pass      |
 | Delete button          | Display/Click    | Displays a Delete button that deletes the correct comment                     | Pass      |
 | Cancel button          | Display/Click    | Redirects user back to the previous page                      | Pass      |
@@ -329,15 +329,15 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
 | Register fields              | Display    | Shows all relevant fields to sign up and create an account                                          | Pass      |
-| Sign Up button            | Display/Click    | Displays the sign up button and informs user of any empty fields                      | Pass      |
+| Sign Up button            | Display/Click    | Displays the sign-up button and informs the user of any empty fields                      | Pass      |
 | Sign Up   | Display/Click    | Successfully creates a user account and displays an appropriate message that says successfully signed in as the user                | Pass      |
 
 #### Login
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
-| Login              | Display    | Shows all relevant fields to sign into an existing account (Username and Password)                                         | Pass      |
-| Sign In button            | Display/Click    | Displays the login button and informs user of any empty fields if any                      | Pass      |
+| Login              | Display    | Shows all relevant fields to sign in to an existing account (Username and Password)                                         | Pass      |
+| Sign In button            | Display/Click    | Displays the login button and informs the user of any empty fields if any                      | Pass      |
 | Sign In   | Click    | Successfully logs in and displays an appropriate message                | Pass      |
 
 #### Logout
@@ -345,7 +345,7 @@ My site was meticulously tested and viewed multiple times on desktop, laptop and
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
 | Logout              | Display    | Shows a relevant message asking if the user wants to log out                                         | Pass      |
-| Logout button            | Display/Click    | Displays the logout button and successfully logs the user out of their account w/ a message                      | Pass      |
+| Logout button            | Display/Click    | Displays the logout button and successfully logs the user out of their account with/ a message                      | Pass      |
 
 
 
@@ -358,17 +358,17 @@ The above tables were created using [AliOKeeffe's](https://github.com/AliOKeeffe
 
 ### Fixed Bugs
 
-There were of course a number of bugs big and small that I came across while contstructing my site. These can be seen in the list below:
+There were of course several bugs big and small that I came across while constructing my site. These can be seen in the list below:
 
-* An error with data type being an integar unable to be converted to a datetimefield. This occured while I was trying to modify my data model field for release date. I later found out that there can be some issues that occur when trying to change a data field after data has already been entered, which meant that I first had to empty the database before making any necesssary changes to my data model.
+* An error with the data type being an integer unable to be converted to a datetimefield. This occurred while I was trying to modify my data model field for the release date. I later found out that there can be some issues that occur when trying to change a data field after data has already been entered, which meant that I first had to empty the database before making any necessary changes to my data model.
 
-* Trying to write a custom class based view so that both the Release data as well as the Article data would be displayed correctly on the homepage was a big challenge for me when building this site. 
+* Trying to write a custom class-based view so that both the Release data as well as the Article data would be displayed correctly on the homepage was a big challenge for me when building this site. 
 
-* Adding crud functionality to my site was undoubtedly one of the most challenging aspects of building my project. As the  codestar blog tutorial only covered an administrator being able to edit user comments as well as delete them, I had to find a way to allow a specific registered user to be able to both edit as well as delete their own comment without altering anybody else's. 
+* Adding crud functionality to my site was undoubtedly one of the most challenging aspects of building my project. As the codestar blog tutorial only covered an administrator being able to edit user comments as well as delete them, I had to find a way to allow a specific registered user to be able to both edit as well as delete their comment without altering anybody else's. 
 
 * Including null=True to my review and article fields in my Comment data model ensured that the fields could be null meaning I don't have to provide data for those fields when posting comments on either the articles page or reviews page.
 
-* I was having some issues with posting an image through my form I created in Django, as everything else was being posted successfully. I managed to, however, with some help from tutor support identify the problem which was the enctype="multipart/form-data" attribute. This is set to text by default, which I needed to change in order to successfully post an image.
+* I was having some issues with posting an image through the form I created in Django, as everything else was being posted successfully. I managed to, however, with some help from tutor support identify the problem which was the enctype="multipart/form-data" attribute. This is set to text by default, which I needed to change to successfully post an image.
 
 ## Unfixed Bugs
 
