@@ -31,6 +31,8 @@ Click [here](./README.md) to be redirected back to the original Readme document
 
 
 ## User story testing
+Below are the most crucial features of my site that had to be implemented in order for it to meet the essential project criteria laid out in the guidelines. For the full exhaustive list of user stories, please refer to my project board [here](https://github.com/users/Shaf8808/projects/4). Additionally, every single individual feature that I created for my site has been thoroughly tested which can be seen in the [Manual Testing](#manual-testing) section below.
+
 
 #### User story: Account registration
 
@@ -73,10 +75,28 @@ Depending on the number of likes that an article or a review has, the amount is 
 
 #### User story: Managing articles
 
-*As a site admin I can create, read, update and delete articles so that I can manage and control my content*
+*As a site admin I can create, read, update and delete articles/reviews so that I can manage and control my content*
 
 In terms of the content of my website, it is split into three main categories. Articles, Reviews and Releases. It was of course important that I was able to add this content successfully without throwing any errors, as well as cover the rest of crud functionality successfully. 
 
+The image below shows that all three categories of content displayed throughout my site are all changeable at the click of a button. I can easily edit as well as delete each item quickly without needing to access the admin panel. These have all been tested and work as intended. I can also create new content such as articles at the top of the page on the navbar seen in the image below. This is only visible to me as the administrator, and also all function correctly.
+
+<img src="docs/readme_images/homepage-admin.jpg">
+
+
+#### User Story: Open an article
+
+*As a site user I can click on a story so that it opens for me to read*
+
+This particular user story is fairly self-explanatory, where each article or review could be opened for the user to read and view at their leisure. This has been tested with every piece of content on the page, and has successfully passed the test. The image below shows my article detail page.  
+
+<img src="docs/readme_images/article-detail-page.jpg">
+
+#### User Story: Comment on a story
+
+*As a site user I can comment on a story/review so that I can engage with each story and convey my feelings and ideas on the subject matter*
+
+This was also a very important feature of my site where users could leave comments on an article or a review if they had an account on the site. These comments would of course have to be approved by me first before being posted and viewed on the page. This has been tested thoroughly to see if everything works as intended, which it does. Evidence of this can be seen on different pages where users created by me have left different comments throughout the site once approved.
 
 [Back to top](#table-of-contents)
 
