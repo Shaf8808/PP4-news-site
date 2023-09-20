@@ -1,10 +1,10 @@
 # GamesGuide
 
-GamesGuide is a gaming website which contains the latest gaming news across all platforms (PC, Playstation, Xbox and Nintendo). It contains articles ranging from developer interviews to game previews of titles that are set to be released. These articles are meant to be informative to gamers that may wish to gain further information on specific titles that they are interested in purchasing.
+GamesGuide is a gaming website which contains the latest gaming news across all platforms (PC, Playstation, Xbox and Nintendo). It contains articles ranging from developer interviews to game previews of titles that are set to be released. These articles are meant to be informative to gamers who may wish to gain further information on specific titles that they are interested in purchasing.
 
-I have also included a releases section/tab on the right hand side of the homepage image which lists the games releasing in the current month. This quickly lets the user know all of the different titles that are about to come out so they are made aware and may decide to look into if it peaks their interest.
+I have also included a releases section/tab on the right-hand side of the homepage image which lists the games released in the current month. This quickly lets the user know all of the different titles that are about to come out so they are made aware and may decide to look into it if it piques their interest.
 
-Furthermore, my site also contains a seperate page dedicated purely to game reviews of the latest releases. The reason as to why I chose to include a different page strictly for reviews is to make it easier for users to view them if they want to get a good idea of the overall quality of a game in order to make an informed decision wheyther or not to make a purchase. This saves the user both time and effort sifting through article after article trying to find the review of a particular game they are interested in.
+Furthermore, my site also contains a separate page dedicated purely to game reviews of the latest releases. The reason why I chose to include a different page strictly for reviews is to make it easier for users to view them if they want to get a good idea of the overall quality of a game to make an informed decision whether or not to make a purchase. This saves the user both time and effort sifting through article after article trying to find the review of a particular game they are interested in.
 
 <img src="./docs/readme_images/i-am-responsive-image.jpg">
 
@@ -32,8 +32,8 @@ Furthermore, my site also contains a seperate page dedicated purely to game revi
     + [Hottest Releases of the month](#hottest-releases-of-the-month)
     + [Review Page](#reviews-page)
     + [User Account Pages](#user-account-pages)
-    + [Edit comment/delete comment](#editing-and-deleting-comments)	
-    + [Site admin functionality](#site-admin-functionality)	
+    + [Edit comment/delete comment](#editing-and-deleting-comments) 
+    + [Site admin functionality](#site-admin-functionality) 
     + [Add Article](#add-article)
     + [Add Release](#add-release)
     + [Add Review](#add-review)
@@ -52,13 +52,13 @@ Furthermore, my site also contains a seperate page dedicated purely to game revi
 
 ## Target Audience
 
-The main target audience of my website are mainly going to be gamers who either game on a PC or a console looking to gain some information relating to a specific title, or just simply wanting to get the latest news in the world of gaming.
+The main target audience of my website is going to be gamers who either game on a PC or a console looking to gain some information relating to a specific title or just simply want to get the latest news in the world of gaming.
 
 ## User experience (UX)
 
-It is vital that the user experience in the way they interact with my site is as pleasant and easy as possible. When a user enters my site and interacts with it, their level of engagement is determined by how they view the site and what their experience is like as they browse through. 
+The user experience in the way they interact with my site must be as pleasant and easy as possible. When a user enters my site and interacts with it, their level of engagement is determined by how they view the site and what their experience is like as they browse through. 
 
-This is why the front end side of an application is just as important as the back end. I made sure that I did not just focus on the back end to the detriment of the front end side and spent a lot of time carefully constructing the style, structure and presentation of the website. I am very pleased with the end result, as I believe it looks like a professionally made site that is easy and enjoyable to browse through.
+This is why the front end side of an application is just as important as the back end. I made sure that I did not just focus on the back end to the detriment of the front end side and spent a lot of time carefully constructing the style, structure and presentation of the website. I am very pleased with the result, as I believe it looks like a professionally made site that is easy and enjoyable to browse through.
 
 Below are some key things I had to consider when focusing on the front end of my application:
 
@@ -82,11 +82,11 @@ Furthermore, I included some features which I could not implement due to time co
 
 ### Design
 
-I placed a lot of time and effort ensuring the design of my website was both visually appealing as well as simple and effective to users. I believe the final product has successfully achieved that goal both in the colour scheme used throughout the site as well as the structure I have decided to implement to display to the user. 
+I spent a lot of time and effort ensuring the design of my website was both visually appealing as well as simple and effective to users. I believe the final product has successfully achieved that goal both in the colour scheme used throughout the site as well as the structure I have decided to implement to display to the user. 
 
-The main goal of my website is to inform the user through the use of relevent gaming articles which they could quickly select and open as they scroll through the page they are currently on. This is why I have decided to display three articles at a time on one row using bootstrap which just contains the article title and the excerpt as a brief description.
+The main goal of my website is to inform the user through the use of relevant gaming articles which they could quickly select and open as they scroll through the page they are currently on. This is why I have decided to display three articles at a time on one row using Bootstrap which just contains the article title and the excerpt as a brief description.
 
-I have made sure each article card on the homepage is designed in a way that is both aesthetically pleasing to look at as well as objective for achieving it's goal. The user can simply look at a specific article 'card' and quickly deduce what it is about before clicking on the title to open it to display it's contents.
+I have made sure each article card on the homepage is designed in a way that is both aesthetically pleasing to look at as well as objective for achieving its goal. The user can simply look at a specific article 'card' and quickly deduce what it is about before clicking on the title to open it to display it's contents.
 
 It was also important that the images used both as the main homepage image as well as those for each article were responsive and displayed to the user in a clear and structured way. This is why I decided to include the bootstrap class {img-fluid} which ensured that the height and width of the image did not compromise the structural integrity of the site on smaller screens.
 
@@ -97,28 +97,28 @@ Colour palette from Coolors
 
 <img src="./docs/readme_images/colour-palette.jpg">
 
-As the image above shows, I have used a nice contrast of varying colours throughout my site. I have made sure that the colours used are not just visually attractive to look at, but also professional. The first colour I used for my nav-bar, as I needed it to stand out from the rest of the page I decided to use a more bright colour. The second colour I used as the main background for my website. I decided to go for a darker indigo dye colour as I didn't want to put too much strain on the user's eyes as they are reading an article or review. 
+As the image above shows, I have used a nice contrast of varying colours throughout my site. I have made sure that the colours used are not just visually attractive to look at, but also professional. The first colour I used for my nav bar, as I needed it to stand out from the rest of the page I decided to use a more bright colour. The second colour I used as the main background for my website. I decided to go for a darker indigo dye colour as I didn't want to put too much strain on the user's eyes as they are reading an article or review. 
 
-The third grey colour was used for the releases column on the right of the homepage image, while the white colour was used for the text on my site so that users could clearly see the words on my choice of background.
+The third grey colour was used for the releases column on the right of the homepage image, while the white colour was used for the text on my site so that users could see the words on my choice of background.
 
 
 #### Imagery
 
-I have only used one static image for my website, which is the main image on the homepage underneath the header "Welcome to Gamesguide". Every other image has been uploaded through cloudinary.
+I have only used one static image for my website, which is the main image on the homepage underneath the header "Welcome to Gamesguide". Every other image has been uploaded through Cloudinary.
 
 [Back to top](#table-of-contents)
 
 #### Fonts
 
-The fonts that I used are Roboto and Lato, as can be seen in the links within my base.html file. I also used the font Exo for my review page header, which can be seen in my static css file at the top.
+The fonts that I used are Roboto and Lato, as can be seen in the links within my base.html file. I also used the font Exo for my review page header, which can be seen in my static CSS file at the top.
 
 ## Agile Methodology
 
-I have utilised Github projects throughout the development process using an agile approach. What this means is that (ENTER NUMBER HERE) User Stories were created in the To Do column and as I began working on implementing each feature detailed in the issue, I moved them across to the In Progress and then eventually to the Completede column once finished. This was an effective way in keeping track of each and every feature I was working on during the development process as well as plan on the features I wanted to add to my project before starting. It also helped me in structuring my project and making sure I completed each user story feature before moving on to the next.
+I have utilised GitHub projects throughout the development process using an agile approach. What this means is that 25 User Stories were created in the To-Do column and as I began working on implementing each feature detailed in the issue, I moved them across to the In Progress and then eventually to the Completed column once finished. This was an effective way of keeping track of every feature I was working on during the development process as well as planning on the features I wanted to add to my project before starting. It also helped me in structuring my project and making sure I completed each user story feature before moving on to the next.
 
-I have included appropiate labels such as 'could-have', 'should-have' and 'must-have' on features depending on their level of importance. This gave me a good idea on which features to work and concentrate on first (the 'must-haves') and which features to implement later on if I had time.
+I have included appropriate labels such as 'could-have', 'should-have' and 'must-have' on features depending on their level of importance. This gave me a good idea of which features to work and concentrate on first (the 'must-haves') and which features to implement later on if I had time.
 
-I have also added an additional column named 'Future features' that included things which I could include later on should I wish to return to this project. This included issues such as a preview page which would be solely dedicated to game previews.      
+I have also added a column named 'Future features' that includes things which I could include later on should I wish to return to this project. This included issues such as a preview page which would be solely dedicated to game previews.      
 
 
 Click on this link to view the project board [here](https://github.com/Shaf8808/)
@@ -128,16 +128,16 @@ Click on this link to view the project board [here](https://github.com/Shaf8808/
 
 I used principles of Object-Oriented Programming throughout this project and Django’s Class-Based Generic Views. Django AllAuth was used for the user authentication system.
 
-When creating the data models for my project, I first had to plan what type of data I wanted to display to users on my site. In other words, what information did I want to include in my project that would be both relevant and helpful for my target audience which were gamers. 
+When creating the data models for my project, I first had to plan what type of data I wanted to display to users on my site. In other words, what information did I want to include in my project that would be both relevant and helpful for my target audience which were gamers? 
 
-This is how I came up with my current data model. The four main dta models of my project are:
+This is how I came up with my current data model. The four main data models of my project are:
 
 * Article
 * Release
 * Review
 * Comment
 
-Both the Article and Review models are very similar to one another with just a few exceptions such as score, as a review could technically be just another article. The release model I created was a custom data model that included less data as it was going to be displayed as a list next to the main image on the homepage, and therefore could not include a lot of data. The comment model was also a completely custom model as users had to be able to leave comments on both articles as well as reviews, so there was a little bit of an overlap. This meant that my comment model had two foreign keys for both articles and reviews. 
+Both the Article and Review models are very similar to one another with just a few exceptions such as score, as a review could technically be just another article. The release model I created was a custom data model that included less data as it was going to be displayed as a list next to the main image on the homepage, and therefore could not include a lot of data. The comment model was also completely custom as users had to be able to leave comments on both articles as well as reviews, so there was a little bit of an overlap. This meant that my comment model had two foreign keys for both articles and reviews. 
 
 The diagram below details the database schema.
 
@@ -149,19 +149,19 @@ The diagram below details the database schema.
 
 ### User Authentication
 
-I have utilised Django's preinstalled LoginRequiredMixin within some of my views in order to make sure that any requests to access secure pages by non-authenticated users are denied and redirected to the login page. 
+I have utilised Django's preinstalled LoginRequiredMixin within some of my views to make sure that any requests to access secure pages by non-authenticated users are denied and redirected to the login page. 
 
-I have also made use of Django's UserPassesTestMixin in order to limit access based on certain permissions. For example,  users can only edit/delete comments for which they are the author and not anyone else's. I have also made sure that only the site admin(myself) can add, edit and delete articles, releases and reviews. I have done this by using {% if user.is_superuser %}.
+I have also made use of Django's UserPassesTestMixin to limit access based on certain permissions. For example,  users can only edit/delete comments for which they are the author and not anyone else's. I have also made sure that only the site admin(myself) can add, edit and delete articles, releases and reviews. I have done this by using {% if user.is_superuser %}.
 
 ### Form Validation
 
-If the user enters any incorrect type of data (such as text in a datefield), enters nothing at all, the form will not be posted and a warning will appear on the page informing the user of the issue.
+If the user enters any incorrect type of data (such as text in a date field) or enters nothing at all, the form will not be posted and a warning will appear on the page informing the user of the issue.
 
 [Back to top](#table-of-contents)
 
 ### Database Security
 
-I have stored the database url as well as my secret key within a hidden env.py file, which is included in my gitignore so any changes made to it will not be pushed to github and be made public. I have also used Cross-Site Request Forgery (CSRF) tokens on every form implemented throughout the site.
+I have stored the database URL as well as my secret key within a hidden env.py file, which is included in my gitignore so any changes made to it will not be pushed to Git Hub and be made public. I have also used Cross-Site Request Forgery (CSRF) tokens on every form implemented throughout the site.
 
 ## Features
 
@@ -171,10 +171,10 @@ I have stored the database url as well as my secret key within a hidden env.py f
 - I have decided to keep my logo nice and simple with the pre-installed Bootstrap class of nav-bar brand as I believe it looks neat, tidy and professional. I have decided to capitalize both G's in GamesGuide as I believe it looks aesthetically better and gives a more unique feel to the logo. 
 
 **Navigation Bar**
-- My navigation bar is displayed at the top of each and every page with styling that is consistent throughout the site
-- It contains all of the various different links that redirects the user to each page of the site
+- My navigation bar is displayed at the top of every page with styling that is consistent throughout the site
+- It contains all of the various links that redirect the user to each page of the site
 
-There are three main types of user for my particular site, which are:
+There are three main types of users for my particular site, which are:
 
 - A user who is not authenticated and doesn't have an account
 
@@ -188,9 +188,9 @@ There are three main types of user for my particular site, which are:
 
 <img src="./docs/readme_images/navbar-admin.jpg">
 
-Depending on which category the user falls under, my navigation bar displays different links, as can be seen in the screenshots above. When a user has logged in with an authenticated account, their username is displayed on the nav-bar alongside a profile icon.
+Depending on which category the user falls under, my navigation bar displays different links, as can be seen in the screenshots above. When a user has logged in with an authenticated account, their username is displayed on the nav bar alongside a profile icon.
 
-If a non-user logs in to the site, they will be presented with the option to either register an account of their own, or to login if they have already registered. If the user has already logged in to their account, they will be shown the option to logout of their account. If it is an admin who has logged in, they will be presented with more options pertaining to the special privileges only held by myself.
+If a non-user logs in to the site, they will be presented with the option to either register an account of their own or to log in if they have already registered. If the user has already logged in to their account, they will be shown the option to log out of their account. If it is an admin who has logged in, they will be presented with more options about the special privileges only held by myself.
 
 [Back to top](#table-of-contents)
 
@@ -198,11 +198,11 @@ If a non-user logs in to the site, they will be presented with the option to eit
 
 <img src="./docs/readme_images/homepage-no-user.jpg">
 
-The screenshot above showcases my main homepage that the user is greeted with as soon as they enter my site. I have spent a lot of time ensuring the overall structure and layout of the homepage was both visually attractive as well as laid out in an organised manner. 
+The screenshot above showcases my main homepage which the user is greeted with as soon as they enter my site. I have spent a lot of time ensuring the overall structure and layout of the homepage were both visually attractive as well as laid out in an organised manner. 
 
 <img src="./docs/readme_images/homepage-admin.jpg">
 
-As the only one who can add, edit and delete artices and releases on my website is the administrator (myself), the homepage that I look at is very different than the one other users see. The screenshot above shows what I can see when I log in with my admin credentials. As it shows, there are two buttons displayed at the bottom of each data entry for both articles as well as releases. One button is to edit a particular entry, while the other button deletes it from the site and database.
+As the only one who can add, edit and delete articles and releases on my website is the administrator (myself), the homepage that I look at is very different from the one other users see. The screenshot above shows what I can see when I log in with my admin credentials. As it shows, there are two buttons displayed at the bottom of each data entry for both articles as well as releases. One button is to edit a particular entry, while the other button deletes it from the site and database.
 
 The reason why I decided to include this is because I needed a way for myself to quickly edit and/or delete data straight from the site itself rather than through the pre-installed admin panel included with the Django framework. It also covers the crud functionality of my website from an administrative perspective, with the ability to create, read, update and delete data. This is an effective and easy way of manipulating the data presented on the website to users.
 
@@ -210,7 +210,7 @@ The reason why I decided to include this is because I needed a way for myself to
 
 ## Hottest Releases of the month
 
-I have decided to include a column on the right hand side of the page purely dedicated to all of the games being released in the current month. The reason why I have decided to include this is so that the user can quickly take one glance at the card and know immediately which titles are set for release, the release date and the platforms they are coming out on. This provides all of the necessary information in one tabular format while also maintaining a good structurte and layout on the page. This can be seen in the image below:
+I have decided to include a column on the right-hand side of the page purely dedicated to all of the games being released in the current month. The reason why I have decided to include this is so that the user can quickly take one glance at the card and know immediately which titles are set for release, the release date and the platforms they are coming out on. This provides all of the necessary information in one tabular format while also maintaining a good structure and layout on the page. This can be seen in the image below:
 
 <img src="./docs/readme_images/releases-column.jpg">
 
@@ -220,13 +220,13 @@ I have decided to include a column on the right hand side of the page purely ded
 
 <img src="./docs/readme_images/article-detail-page.jpg">
 
-The screenshot above shows my article detail page that users will see once they click on a particular article. I took a lot of inspiration from the Django Codestar blog walkthrough project that I followed along to on the Code Institute LMS. The top half of the page uses the same masthead class styling as the Codestar blog, with the title displayed on the left, and the article image displayed on the right hand side. The reason why I decided to use the same format is because I believed it was both suitable for my particular project as well as aesthetically appealing and professional to users. 
+The screenshot above shows my article detail page that users will see once they click on a particular article. I took a lot of inspiration from the Django Codestar blog walkthrough project that I followed along on the Code Institute LMS. The top half of the page uses the same masthead class styling as the Codestar blog, with the title displayed on the left, and the article image displayed on the right-hand side. The reason why I decided to use the same format is because I believed it was both suitable for my particular project as well as aesthetically appealing and professional to users. 
 
-Below that is the content/body section which contains the actual article story. I have decided to include linebreaks within my code so that it would automatically start a new paragraph whenever I would enter spacing in the form. This is so that the structure and layout of my content is organised and won't just display as one big paragraph.
+Below that is the content/body section which contains the actual article story. I have decided to include line breaks within my code so that it would automatically start a new paragraph whenever I enter spacing in the form. This is so that the structure and layout of my content are organised and won't just display as one big paragraph.
 
-I have also included the added functionality of liking an article only if it is a registered user on the site. This can be done by clicking on the thumbs-up icon used from font awesome. Once it is clicked, the number displayed next to the icon will go up by one. If it is clicked again by the user, the number will decrease and revert back to the original number. This feature of liking/unliking an article was once again borrowed from the Codestar blog tutorial, as I believe it is a feature that could be used for my site as well. I have also included a comment icon on the right that shows the number of comments in an article posted and approved by other users. 
+I have also included the added functionality of liking an article only if it is a registered user on the site. This can be done by clicking on the thumbs-up icon used by Font Awesome. Once it is clicked, the number displayed next to the icon will go up by one. If it is clicked again by the user, the number will decrease and revert to the original number. This feature of liking/unliking an article was once again borrowed from the Codestar blog tutorial, as I believe it is a feature that could be used for my site as well. I have also included a comment icon on the right that shows the number of comments in an article posted and approved by other users. 
 
-Last, but not least, there is the comments section of the page. This is where users can view comments that have been posted and approved by the administrator. This is displayed on the left hand site. On the right, registered users can write a comment of their own before clicking the submit button. This will not, however, automatically be posted to the site. They will be shown a message that says their comment is awaiting approval, which only I can provide. The reason why I have decided to implement this feature is so that the comments can be moderated and checked whether or not they are appropriate before being posted on the site for everyone to see.  
+Last, but not least, there is the comments section of the page. This is where users can view comments that have been posted and approved by the administrator. This is displayed on the left-hand side. On the right, registered users can write a comment of their own before clicking the submit button. This will not, however, automatically be posted to the site. They will be shown a message that says their comment is awaiting approval, which only I can provide. The reason why I have decided to implement this feature is so that the comments can be moderated and checked whether or not they are appropriate before being posted on the site for everyone to see.  
 
 [Back to top](#table-of-contents)
 
@@ -238,13 +238,13 @@ The review details page is identical to the article detail page, as they are bot
 
 <img src="./docs/readme_images/review-page.jpg">
 
-The second page that I have created for my site is a reviews page. This is a page dedicated purely to game reviews of the latest titles. The reason as to why I decided to include this is to make it easier for users to quickly browse through all of the game reviews without needing to go through numerous different articles. This organises every review of a title onto one page for quick and easy access.
+The second page that I have created for my site is a reviews page. This is a page dedicated purely to game reviews of the latest titles. The reason why I decided to include this is to make it easier for users to quickly browse through all of the game reviews without needing to go through numerous different articles. This organises every review of a title onto one page for quick and easy access.
 
 <img src="./docs/readme_clips/gamesguide-review-header.gif">
 
-The gif above shows the custom css animation styling that I implemented on my review page header. I believe that this is both appropriate as well as visually eye-catching to users who enter the page. For the css text styling, I used the site [codepen](https://codepen.io/mireille1306/pen/BawdXzY) while making a few adjustments here and there in order to make it more appropriate for my site. 
+The gif above shows the custom CSS animation styling that I implemented on my review page header. I believe that this is both appropriate as well as visually eye-catching to users who enter the page. For the CSS text styling, I used the site [codepen](https://codepen.io/mireille1306/pen/BawdXzY) while making a few adjustments here and there to make it more appropriate for my site. 
 
-For the custom animation, I used [slider-revolution](https://www.sliderrevolution.com/resources/css-text-animation/) in order to give the page more interactivity and catch the user's eye The name of the animation I used is css text revealing animation. I carefully looked at all the other animations on the site, and decided this was the most appropriate and suitable for my project. 
+For the custom animation, I used [slider-revolution](https://www.sliderrevolution.com/resources/css-text-animation/) to give the page more interactivity and catch the user's eye The name of the animation I used is css text revealing animation. I carefully looked at all the other animations on the site and decided this was the most appropriate and suitable for my project. 
 
 [Back to top](#table-of-contents)
 
@@ -262,7 +262,7 @@ For the custom animation, I used [slider-revolution](https://www.sliderrevolutio
 
 <img src="./docs/readme_images/logout-page.jpg">
 
-Django allauth was installed and used to create the register, log out and log in functionality for my website. I have changed the login templates of Django Allauth (login, signup html files etc.) to improve UI and inherit styling of my own templates and css.
+Django allauth was installed and used to create the register, log out and login functionality for my website. I have changed the login templates of Django Allauth (login, signup HTML files etc.) to improve UI and inherit the styling of my templates and CSS.
 
 [Back to top](#table-of-contents)
 
@@ -270,19 +270,19 @@ Django allauth was installed and used to create the register, log out and log in
 
 <img src="./docs/readme_clips/editing-comments.gif">
 
-In order to provide users with the ability to add, view, edit and delete their own data, I have added the functionality to edit and delete their own comments should they wish to. I have made sure that my code only allows a user to change their own comments, and not anybody else's, as can be seen in the gif above. 
+To provide users with the ability to add, view, edit and delete their data, I have added the functionality to edit and delete their comments should they wish to. I have made sure that my code only allows a user to change their comments, and not anybody else's, as can be seen in the gif above. 
 
-The user that has logged into the site is called boom as an example. This can be seen at the top on the nav bar next to the profile icon. This user has left two comments on the article, both of which has the buttons of edit comments, and deleting comments.  The first comment left by the admin does not include the buttons, as it is a different user logged in to the site.
+The user that has logged into the site is called Boom for example. This can be seen at the top of the nav bar next to the profile icon. This user has left two comments on the article, both of which have buttons for editing comments and deleting comments.  The first comment left by the admin does not include the buttons, as it is a different user logged in to the site.
 
 [Back to top](#table-of-contents)
 
 ## Site admin functionality
 
-As a site administrator, I have the ability to add articles, releases as well as reviews on the website. This can be done through links at the top of the page on the nav-bar that only the superuser can see and has access to. This can be seen in the image below:
+As a site administrator, I can add articles, releases as well and reviews on the website. This can be done through links at the top of the page on the nav bar that only the superuser can see and have access to. This can be seen in the image below:
 
 <img src="./docs/readme_images/admin-nav-bar.jpg" height="18rem">
 
-Once a link has been selected, I am directed to the relevant form depending on the option I selected. The screenshots below show each form page for all three types of data that are present in my site.
+Once a link has been selected, I am directed to the relevant form depending on the option I selected. The screenshots below show each form page for all three types of data that are present on my site.
 
 ### Add Article
 
@@ -302,7 +302,7 @@ Once a link has been selected, I am directed to the relevant form depending on t
 
 ## Crud functionality
 
-Being able to simply add articles and the like in order to view them on the site is of course not enough, as that only covers the first two parts of crud functionality. I needed the ability to both edit as well as delete data. The forms that I am shown once one of the two aformentioned buttons are selected can be seen below:
+Being able to simply add articles and the like to view them on the site is of course not enough, as that only covers the first two parts of crud functionality. I needed the ability to both edit as well as delete data. The forms that I am shown once one of the two aforementioned buttons are selected can be seen below:
 
 **Edit article**
 
@@ -314,25 +314,25 @@ Being able to simply add articles and the like in order to view them on the site
 
 ## Future features
 
-I decided to include an additional column on my kanban board aptly named future features. These are some things which I could possibly include in the future if I ever revisit this particular project. Features which I could not implement due to time constraints. These include:
+I decided to include an additional column on my Kanban board aptly named Future Features. These are some things which I could include in the future if I ever revisit this particular project. Features which I could not implement due to time constraints. These include:
 
 - Game previews
-As a site user I can navigate to a seperate page to view game previews so that I can quickly and easily gain an insight on upcoming games
+As a site user, I can navigate to a separate page to view game previews so that I can quickly and easily gain insight into upcoming games
 
 - Draft articles and reviews
-As a site admin I can view all draft articles and reviews on the site so that I can quickly edit and publish them without needing to access the admin panel
+As a site admin, I can view all draft articles and reviews on the site so that I can quickly edit and publish them without needing to access the admin panel
 
 [Back to top](#table-of-contents)
 
 ## Responsive design
 
-It was absolutely crucial that my site remained responsive on all devices, whether it was a laptop, PC, tablet or mobile phone. This is where bootstrap really helped in ensuring that all of my images could be viewed clearly without causing any issues when it came to positioning. This is why I used the bootstrap class of img-fluid to ensure that the height and width of my images matched the screen size of the device the user is viewing my site on.
+My site needed to remain responsive on all devices, whether it was a laptop, PC, tablet or mobile phone. This is where Bootstrap helped ensure that all of my images could be viewed clearly without causing any issues when it came to positioning. This is why I used the bootstrap class of img-fluid to ensure that the height and width of my images matched the screen size of the device the user was viewing my site.
 
-All of my article 'cards' are displayed in rows of three on bigger screen sizes, but then fills the full width of the screen on mobile devices and is displayed one after another.. This can be seen in the gif below:
+All of my article 'cards' are displayed in rows of three on bigger screen sizes, but then fill the full width of the screen on mobile devices and are displayed one after another. This can be seen in the gif below:
 
 <img src="./docs/readme_clips/responsive-design.gif">
 
-I believe that this makes it easy for users using their phone to scroll through my website and easily view all the different articles without everything becoming too cramped and unreadable. The gif below shows my review page which is also fully responsive on smaller screens:
+I believe that this makes it easy for users using their phones to scroll through my website and easily view all the different articles without everything becoming too cramped and unreadable. The gif below shows my review page which is also fully responsive on smaller screens:
 
 <img src="./docs/readme_clips/responsive-review-page.gif" width="335rem" height="655rem">
 
@@ -342,13 +342,13 @@ The article/review detail page also of course needed to be responsive in a way t
 
 <img src="./docs/readme_clips/responsive-article-detail-page.gif">
 
-I have decided to get rid of the image on the detail page altogether as it would look awkward and strange if included on a smaller screen. I am pleased and happy with how it looks in it's current form.  
+I have decided to get rid of the image on the detail page altogether as it would look awkward and strange if included on a smaller screen. I am pleased with how it looks in its current form.  
 
-The navbar for my site is also fully responsive thanks to the prerequisite bootstrap navbar classes that I utilised for my project. As the screen gets smaller, it transforms from a regular navbar to a 'hamburger' style navbar. The gif below showcases how it works on smaller devices:
+The navbar for my site is also fully responsive thanks to the prerequisite bootstrap navbar classes that I utilised for my project. As the screen gets smaller, it transforms from a regular navbar to a 'hamburger-style navbar. The gif below showcases how it works on smaller devices:
 
 <img src="./docs/readme_clips/responsive-navbar.gif">
 
-Thanks to the navbar-expand/collapse classes, once the user clicks the hamburger icon, all of the links drop down for selection. If clicked again, the navbar closes back to it's original form. I believe that this is an effective way of ensuring it is easy for mobile users to quickly and easily navigate to a page if required, as well as clearly view all of the different links available to them on a smaller screen.
+Thanks to the navbar-expand/collapse classes, once the user clicks the hamburger icon, all of the links drop down for selection. If clicked again, the navbar closes back to its original form. I believe that this is an effective way of ensuring it is easy for mobile users to quickly and easily navigate to a page if required, as well as view all of the different links available to them on a smaller screen.
 
 
 [Back to top](#table-of-contents)
@@ -362,8 +362,8 @@ My testing section can be found [here](./TESTING.md)
 
 ## Deployment-Heroku
 
-The information below were taken from the LMS of Code Institute.
-In order to successfully deploy this site to Heroku, the following steps were taken:
+The information below was taken from the LMS of Code Institute.
+To successfully deploy this site to Heroku, the following steps were taken:
 
 ### Creating the Heroku app
 - Log in to Heroku
@@ -372,7 +372,7 @@ In order to successfully deploy this site to Heroku, the following steps were ta
 - Select your specific region
 - Click on the Create App button
 
-### Create relevent files/directories
+### Create relevant files/directories
 - Create a requirements.txt file
 - Create three directories in the main directory; media, storage and templates
 - Create a file named "Procfile" in the main directory and add the following: 
@@ -394,11 +394,11 @@ Add the following Config Vars in Heroku:
 - Set up your plan by giving it a name
 - Select the Tiny Turtle (Free) plan. You can leave the Tags field blank
 - Click 'Select Region'
-- Select a data center near you
+- Select a data centre near you
 - Then click 'Review'
-- Check you details are correct and then click 'Create Instance'
+- Check your details are correct and then click 'Create Instance'
 - Return to the ElephantSQL dashboard and click on the database instance name for this project
-- Copy the database url for your project
+- Copy the database URL for your project
 
 ### Connecting the database to our app
 
@@ -445,7 +445,7 @@ DATABASES = {
 ```
 python3 manage.py migrate
 ```
-- Run the project to test everything is connected properly
+- Run the project to test that everything is connected properly
 
 ### Deploy
 
@@ -462,7 +462,7 @@ The site is now live and operational.
 ## Forking this repository
 
 - Locate the repository [here](https://github.com/Shaf8808/PP4-news-site)
-- On the top right hand corner of the page, select 'Fork'
+- On the top right-hand corner of the page, select 'Fork'
 
 ## Cloning this repository
 
@@ -489,17 +489,17 @@ The site is now live and operational.
 - [Django](https://www.djangoproject.com/): Main python framework used in the development of this project
 - [Django-allauth](https://django-allauth.readthedocs.io/en/latest/): authentication library used to create the user accounts
 - [ElephantSQL](https://www.elephantsql.com/) was used as the database for this project.
-- [Heroku](https://dashboard.heroku.com/login) - was used as the cloud based platform to deploy the site on.
+- [Heroku](https://dashboard.heroku.com/login) - was used as the cloud-based platform to deploy the site on.
 - [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for overall development and tweaking, including testing responsiveness and performance.
-- [Font Awesome](https://fontawesome.com/) - Used for icons in information bar.
+- [Font Awesome](https://fontawesome.com/) - Used for icons in the information bar.
 - [GitHub](https://github.com/) - Used for version control and agile tool.
 - [Google Fonts](https://fonts.google.com/) - Used to import and alter fonts on the page.
 - [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
 - [PEP8 Online](http://pep8online.com/) - used to validate all the Python code
 - [Jshint](https://jshint.com/) - used to validate javascript
-- [Coolors](https://coolors.co/) - Used to create colour palette.
+- [Coolors](https://coolors.co/) - Used to create a colour palette.
 - [Google Sheets](https://docs.google.com/spreadsheets) - used to create the database schema design
-- [Grammerly](https://app.grammarly.com/) - used to proof read the README.md
+- [Grammerly](https://app.grammarly.com/) - used to proofread the README.md
 - [Summernote](https://summernote.org/): A WYSIWYG editor to allow users to edit their posts
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) used to manage Django Forms
 - [Cloudinary](https://cloudinary.com/): the image hosting service used to upload images
